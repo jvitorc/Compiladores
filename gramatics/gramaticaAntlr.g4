@@ -22,8 +22,8 @@ a:  INT
     | FLOAT
     | STRING
     ;
-b:  COLCHA INT_CONTANT COLCHF
-    | COLCHA INT_CONTANT COLCHF b
+b:  COLCHA INT_CONSTANT COLCHF
+    | COLCHA INT_CONSTANT COLCHF b
     |
     ;
 
@@ -62,4 +62,5 @@ e:  F unaryexpr
     | 
     ;
 
-unaryexpr
+unaryexpr: INT_CONSTANT
+        | FLOAT_CON 
