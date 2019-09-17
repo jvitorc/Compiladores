@@ -1,0 +1,13 @@
+INT=1
+MAIS=2
+MENOS=3
+MULT=4
+DIV=5
+PARANTABER=6
+PARANTFECH=7
+'+'=2
+'-'=3
+'*'=4
+'/'=5
+'('=6
+')'=7
