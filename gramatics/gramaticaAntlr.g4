@@ -91,3 +91,33 @@ g: COLCHA expression COLCHF
   ;
 
 // DEFINIR TOKEN
+
+INT: 'int';
+STRING: 'string';
+FLOAT: 'float';
+BREAK: 'break';
+ENDLINE : ';';
+EQUAL: '=';
+PRINT: 'print';
+CHAVEA: '{';
+CHAVEF: '}';
+COLCHA: '[';
+COLCHF: ']';
+READ: 'read';
+RETURN: 'return';
+PARENTEA: '(';
+PARENTEF: ')';
+IF: 'if';
+ELSE: 'else';
+FOR: 'for';
+NEW: 'new';
+COMPARADORES: '<' | '>' | '<=' | '>=' | '==' | '!=';
+MAISOUMENOS: '+' | '-';
+MDP: '*' | '/' | '%';
+NULL: 'null';
+
+// TOKENS IDENTIFICADOR DE PALAVRAS DIVERSAS
+IDENT: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+INT_CONSTANT: '0' | ('1'..'9')('0'..'9')*;
+FLOAT_CONSTANT: ( '0' | ('1'..'9')('0'..'9')* )'.'('0'..'9')+;
+STRING_CONSTANT:  '"'('a'..'z'|'A'..'Z'|'_'|'0'..'9')*'"';
