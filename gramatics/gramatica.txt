@@ -36,13 +36,20 @@
 
     EXPRESSION: NUMEXPRESSION | NUMEXPRESSION D NUMEXPRESSION
     D: < | > | <= | >= | == | !=
+    
+    NUMEXPRESSION: TERM N
 
+    N: MAISOUMENOS TERM | MAISOUMENOS TERM N | &
+    MAISOUMENOS: + | -
+    
     TERM: UNARYEXPR E
     E: F UNARYEXPR | F UNARYEXPR E | &
     F: * | \ | %
 
+    UNARYEXPR: MAISOUMENOS FACTOR | FACTOR
+
     #Colocamos EXPRESSION entre parênteses porque é uma expressão, mas não temos certeza
-    UNARYEXPR: int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION)
+    FACTOR: int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION)
 
     LVALUE: ident G
     G: [EXPRESSION] | [EXPRESSION]G | &

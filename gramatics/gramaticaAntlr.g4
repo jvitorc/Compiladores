@@ -57,12 +57,20 @@ expression: numexpression
 
 term: unaryexpr e;
 
+numexpression: term j;
+
+j: MAISOUMENOS term
+        | MAISOUMENOS term j
+        ;
+
 e:  F unaryexpr
     | F unaryexpr e
     |
     ;
 
-unaryexpr: INT_CONSTANT
+unaryexpr: 
+
+factor: INT_CONSTANT
         | FLOAT_CON
         | STRING_CONSTANT
         | NULL
