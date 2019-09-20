@@ -4,14 +4,14 @@ program: statement
         |
         ;
 
-statement: vardecl ENDLINE # BinaryOp 
+statement: vardecl ENDLINE # BinaryOp
         | atribstat ENDLINE #BinaryOp
         | printstat ENDLINE #BinaryOp
         | readstat ENDLINE #BinaryOp
         | returnstat ENDLINE #BinaryOp
         | ifstat ENDLINE #BinaryOp
         | forstat ENDLINE #BinaryOp
-        | CHAVEA statelist CHAVEF #BinaryListOp 
+        | CHAVEA statelist CHAVEF #BinaryListOp
         | BREAK ENDLINE #Break
         | ENDLINE #EndLine
         ;
@@ -41,7 +41,7 @@ ifstat: IF PARENTEA expression PARENTEF statelist
 
 forstat: FOR PARENTEA atribstat ENDLINE numexpression ENDLINE atribstat PARENTEF statement;
 
-statelist: statement 
+statelist: statement
             | statement statelist
             ;
 
@@ -59,8 +59,20 @@ term: unaryexpr e;
 
 e:  F unaryexpr
     | F unaryexpr e
-    | 
+    |
     ;
 
 unaryexpr: INT_CONSTANT
-        | FLOAT_CON 
+        | FLOAT_CON
+        | STRING_CONSTANT
+        | NULL
+        | lvalue
+        | PARENTEA expression PARENTEF
+        ;
+
+lvalue: IDENT g;
+
+g: COLCHA expression COLCHF
+  | COLCHA expression COLCHF g
+  |
+  ;
