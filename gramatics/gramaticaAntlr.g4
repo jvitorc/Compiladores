@@ -35,7 +35,7 @@ printstat: PRINT expression;
 readstat: READ lvalue;
 returnstat: RETURN;
 
-ifstat: IF PARENTEA expression PARENTEF statelist
+ifstat: IF PARENTEA expression PARENTEF statement
         | IF PARENTEA expression PARENTEF statement ELSE statement
         ;
 
@@ -52,26 +52,31 @@ c: COLCHA expression COLCHF
     ;
 
 expression: numexpression
-            | numexpression D numexpression
+            | numexpression COMPARADORES numexpression
             ;
+
+
+numexpression: term n;
+
+n: MAISOUMENOS term
+        | MAISOUMENOS term n
+        |
+        ;
 
 term: unaryexpr e;
 
-numexpression: term j;
-
-j: MAISOUMENOS term
-        | MAISOUMENOS term j
-        ;
-
-e:  F unaryexpr
-    | F unaryexpr e
+// MDP : * , / , %
+e:  MDP unaryexpr
+    | MDP unaryexpr e
     |
     ;
 
-unaryexpr: 
+unaryexpr: MAISOUMENOS factor 
+        | factor
+        ;
 
 factor: INT_CONSTANT
-        | FLOAT_CON
+        | FLOAT_CONSTANT
         | STRING_CONSTANT
         | NULL
         | lvalue
@@ -84,3 +89,5 @@ g: COLCHA expression COLCHF
   | COLCHA expression COLCHF g
   |
   ;
+
+// DEFINIR TOKEN
