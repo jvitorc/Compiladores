@@ -5,12 +5,13 @@ from gramaticaAntlrLexer import gramaticaAntlrLexer
 from gramaticaAntlrParser import gramaticaAntlrParser
  
 def main(argv):
-    input_stream = FileStream(argv[1])
+    a = open(argv[1], 'rt', encoding='ascii')
+    input_stream = a
     print(type(input_stream))
-    lexer = gramaticaAntlrLexer(input_stream.encode("ascii"))
+    lexer = gramaticaAntlrLexer(input_stream)
     stream = CommonTokenStream(lexer)
-    parser = gramaticaAntlrParser(stream)
-    tree = parser.startRule()
+    # parser = gramaticaAntlrParser(stream)
+    # tree = parser.startRule()
  
 if __name__ == '__main__':
     main(sys.argv)
