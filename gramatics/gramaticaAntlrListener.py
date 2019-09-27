@@ -17,39 +17,12 @@ class gramaticaAntlrListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by gramaticaAntlrParser#BinaryOp.
-    def enterBinaryOp(self, ctx:gramaticaAntlrParser.BinaryOpContext):
+    # Enter a parse tree produced by gramaticaAntlrParser#statement.
+    def enterStatement(self, ctx:gramaticaAntlrParser.StatementContext):
         pass
 
-    # Exit a parse tree produced by gramaticaAntlrParser#BinaryOp.
-    def exitBinaryOp(self, ctx:gramaticaAntlrParser.BinaryOpContext):
-        pass
-
-
-    # Enter a parse tree produced by gramaticaAntlrParser#BinaryListOp.
-    def enterBinaryListOp(self, ctx:gramaticaAntlrParser.BinaryListOpContext):
-        pass
-
-    # Exit a parse tree produced by gramaticaAntlrParser#BinaryListOp.
-    def exitBinaryListOp(self, ctx:gramaticaAntlrParser.BinaryListOpContext):
-        pass
-
-
-    # Enter a parse tree produced by gramaticaAntlrParser#Break.
-    def enterBreak(self, ctx:gramaticaAntlrParser.BreakContext):
-        pass
-
-    # Exit a parse tree produced by gramaticaAntlrParser#Break.
-    def exitBreak(self, ctx:gramaticaAntlrParser.BreakContext):
-        pass
-
-
-    # Enter a parse tree produced by gramaticaAntlrParser#EndLine.
-    def enterEndLine(self, ctx:gramaticaAntlrParser.EndLineContext):
-        pass
-
-    # Exit a parse tree produced by gramaticaAntlrParser#EndLine.
-    def exitEndLine(self, ctx:gramaticaAntlrParser.EndLineContext):
+    # Exit a parse tree produced by gramaticaAntlrParser#statement.
+    def exitStatement(self, ctx:gramaticaAntlrParser.StatementContext):
         pass
 
 

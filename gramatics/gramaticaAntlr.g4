@@ -4,16 +4,16 @@ program: statement
         |
         ;
 
-statement: vardecl ENDLINE # BinaryOp
-        | atribstat ENDLINE #BinaryOp
-        | printstat ENDLINE #BinaryOp
-        | readstat ENDLINE #BinaryOp
-        | returnstat ENDLINE #BinaryOp
-        | ifstat ENDLINE #BinaryOp
-        | forstat ENDLINE #BinaryOp
-        | CHAVEA statelist CHAVEF #BinaryListOp
-        | BREAK ENDLINE #Break
-        | ENDLINE #EndLine
+statement: vardecl ENDLINE
+        | atribstat ENDLINE
+        | printstat ENDLINE
+        | readstat ENDLINE
+        | returnstat ENDLINE
+        | ifstat 
+        | forstat
+        | CHAVEA statelist CHAVEF
+        | BREAK ENDLINE
+        | ENDLINE
         ;
 
 vardecl: a IDENT b;

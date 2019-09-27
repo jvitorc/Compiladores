@@ -8,95 +8,93 @@ import sys
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\36")
-        buf.write("\u00e2\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\u00de\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\3\2")
         buf.write("\3\2\5\2\63\n\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3")
         buf.write("\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3")
-        buf.write("\3\3\3\3\3\3\3\3\3\3\5\3Q\n\3\3\4\3\4\3\4\3\4\3\5\3\5")
-        buf.write("\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6a\n\6\3\7\3\7\3\7")
-        buf.write("\3\7\3\7\3\7\3\7\3\7\5\7k\n\7\3\b\3\b\3\b\3\t\3\t\3\t")
-        buf.write("\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13")
-        buf.write("\3\13\3\13\3\13\3\13\3\13\5\13\u0083\n\13\3\f\3\f\3\f")
-        buf.write("\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3\r\5\r\u0093")
-        buf.write("\n\r\3\16\3\16\3\16\3\16\3\17\3\17\3\17\3\17\3\17\3\17")
-        buf.write("\3\17\3\17\3\17\5\17\u00a2\n\17\3\20\3\20\3\20\3\20\3")
-        buf.write("\20\5\20\u00a9\n\20\3\21\3\21\3\21\3\22\3\22\3\22\3\22")
-        buf.write("\3\22\3\22\3\22\5\22\u00b5\n\22\3\23\3\23\3\23\3\24\3")
-        buf.write("\24\3\24\3\24\3\24\3\24\3\24\5\24\u00c1\n\24\3\25\3\25")
-        buf.write("\3\25\5\25\u00c6\n\25\3\26\3\26\3\26\3\26\3\26\3\26\3")
-        buf.write("\26\3\26\3\26\5\26\u00d1\n\26\3\27\3\27\3\27\3\30\3\30")
-        buf.write("\3\30\3\30\3\30\3\30\3\30\3\30\3\30\3\30\5\30\u00e0\n")
-        buf.write("\30\3\30\2\2\31\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36")
-        buf.write(" \"$&(*,.\2\3\3\2\3\5\2\u00e7\2\62\3\2\2\2\4P\3\2\2\2")
-        buf.write("\6R\3\2\2\2\bV\3\2\2\2\n`\3\2\2\2\fj\3\2\2\2\16l\3\2\2")
-        buf.write("\2\20o\3\2\2\2\22r\3\2\2\2\24\u0082\3\2\2\2\26\u0084\3")
-        buf.write("\2\2\2\30\u0092\3\2\2\2\32\u0094\3\2\2\2\34\u00a1\3\2")
-        buf.write("\2\2\36\u00a8\3\2\2\2 \u00aa\3\2\2\2\"\u00b4\3\2\2\2$")
-        buf.write("\u00b6\3\2\2\2&\u00c0\3\2\2\2(\u00c5\3\2\2\2*\u00d0\3")
-        buf.write("\2\2\2,\u00d2\3\2\2\2.\u00df\3\2\2\2\60\63\5\4\3\2\61")
-        buf.write("\63\3\2\2\2\62\60\3\2\2\2\62\61\3\2\2\2\63\3\3\2\2\2\64")
-        buf.write("\65\5\6\4\2\65\66\7\7\2\2\66Q\3\2\2\2\678\5\f\7\289\7")
-        buf.write("\7\2\29Q\3\2\2\2:;\5\16\b\2;<\7\7\2\2<Q\3\2\2\2=>\5\20")
-        buf.write("\t\2>?\7\7\2\2?Q\3\2\2\2@A\5\22\n\2AB\7\7\2\2BQ\3\2\2")
-        buf.write("\2CD\5\24\13\2DE\7\7\2\2EQ\3\2\2\2FG\5\26\f\2GH\7\7\2")
-        buf.write("\2HQ\3\2\2\2IJ\7\n\2\2JK\5\30\r\2KL\7\13\2\2LQ\3\2\2\2")
-        buf.write("MN\7\6\2\2NQ\7\7\2\2OQ\7\7\2\2P\64\3\2\2\2P\67\3\2\2\2")
-        buf.write("P:\3\2\2\2P=\3\2\2\2P@\3\2\2\2PC\3\2\2\2PF\3\2\2\2PI\3")
-        buf.write("\2\2\2PM\3\2\2\2PO\3\2\2\2Q\5\3\2\2\2RS\5\b\5\2ST\7\32")
-        buf.write("\2\2TU\5\n\6\2U\7\3\2\2\2VW\t\2\2\2W\t\3\2\2\2XY\7\f\2")
-        buf.write("\2YZ\7\33\2\2Za\7\r\2\2[\\\7\f\2\2\\]\7\33\2\2]^\7\r\2")
-        buf.write("\2^a\5\n\6\2_a\3\2\2\2`X\3\2\2\2`[\3\2\2\2`_\3\2\2\2a")
-        buf.write("\13\3\2\2\2bc\5,\27\2cd\7\b\2\2de\5\36\20\2ek\3\2\2\2")
-        buf.write("fg\5,\27\2gh\7\b\2\2hi\5\32\16\2ik\3\2\2\2jb\3\2\2\2j")
-        buf.write("f\3\2\2\2k\r\3\2\2\2lm\7\t\2\2mn\5\36\20\2n\17\3\2\2\2")
-        buf.write("op\7\16\2\2pq\5,\27\2q\21\3\2\2\2rs\7\17\2\2s\23\3\2\2")
-        buf.write("\2tu\7\22\2\2uv\7\20\2\2vw\5\36\20\2wx\7\21\2\2xy\5\4")
-        buf.write("\3\2y\u0083\3\2\2\2z{\7\22\2\2{|\7\20\2\2|}\5\36\20\2")
-        buf.write("}~\7\21\2\2~\177\5\4\3\2\177\u0080\7\23\2\2\u0080\u0081")
-        buf.write("\5\4\3\2\u0081\u0083\3\2\2\2\u0082t\3\2\2\2\u0082z\3\2")
-        buf.write("\2\2\u0083\25\3\2\2\2\u0084\u0085\7\24\2\2\u0085\u0086")
-        buf.write("\7\20\2\2\u0086\u0087\5\f\7\2\u0087\u0088\7\7\2\2\u0088")
-        buf.write("\u0089\5\36\20\2\u0089\u008a\7\7\2\2\u008a\u008b\5\f\7")
-        buf.write("\2\u008b\u008c\7\21\2\2\u008c\u008d\5\4\3\2\u008d\27\3")
-        buf.write("\2\2\2\u008e\u0093\5\4\3\2\u008f\u0090\5\4\3\2\u0090\u0091")
-        buf.write("\5\30\r\2\u0091\u0093\3\2\2\2\u0092\u008e\3\2\2\2\u0092")
-        buf.write("\u008f\3\2\2\2\u0093\31\3\2\2\2\u0094\u0095\7\25\2\2\u0095")
-        buf.write("\u0096\5\b\5\2\u0096\u0097\5\34\17\2\u0097\33\3\2\2\2")
-        buf.write("\u0098\u0099\7\f\2\2\u0099\u009a\5\36\20\2\u009a\u009b")
-        buf.write("\7\r\2\2\u009b\u00a2\3\2\2\2\u009c\u009d\7\f\2\2\u009d")
-        buf.write("\u009e\5\36\20\2\u009e\u009f\7\r\2\2\u009f\u00a0\5\34")
-        buf.write("\17\2\u00a0\u00a2\3\2\2\2\u00a1\u0098\3\2\2\2\u00a1\u009c")
-        buf.write("\3\2\2\2\u00a2\35\3\2\2\2\u00a3\u00a9\5 \21\2\u00a4\u00a5")
-        buf.write("\5 \21\2\u00a5\u00a6\7\26\2\2\u00a6\u00a7\5 \21\2\u00a7")
-        buf.write("\u00a9\3\2\2\2\u00a8\u00a3\3\2\2\2\u00a8\u00a4\3\2\2\2")
-        buf.write("\u00a9\37\3\2\2\2\u00aa\u00ab\5$\23\2\u00ab\u00ac\5\"")
-        buf.write("\22\2\u00ac!\3\2\2\2\u00ad\u00ae\7\27\2\2\u00ae\u00b5")
-        buf.write("\5$\23\2\u00af\u00b0\7\27\2\2\u00b0\u00b1\5$\23\2\u00b1")
-        buf.write("\u00b2\5\"\22\2\u00b2\u00b5\3\2\2\2\u00b3\u00b5\3\2\2")
-        buf.write("\2\u00b4\u00ad\3\2\2\2\u00b4\u00af\3\2\2\2\u00b4\u00b3")
-        buf.write("\3\2\2\2\u00b5#\3\2\2\2\u00b6\u00b7\5(\25\2\u00b7\u00b8")
-        buf.write("\5&\24\2\u00b8%\3\2\2\2\u00b9\u00ba\7\30\2\2\u00ba\u00c1")
-        buf.write("\5(\25\2\u00bb\u00bc\7\30\2\2\u00bc\u00bd\5(\25\2\u00bd")
-        buf.write("\u00be\5&\24\2\u00be\u00c1\3\2\2\2\u00bf\u00c1\3\2\2\2")
-        buf.write("\u00c0\u00b9\3\2\2\2\u00c0\u00bb\3\2\2\2\u00c0\u00bf\3")
-        buf.write("\2\2\2\u00c1\'\3\2\2\2\u00c2\u00c3\7\27\2\2\u00c3\u00c6")
-        buf.write("\5*\26\2\u00c4\u00c6\5*\26\2\u00c5\u00c2\3\2\2\2\u00c5")
-        buf.write("\u00c4\3\2\2\2\u00c6)\3\2\2\2\u00c7\u00d1\7\33\2\2\u00c8")
-        buf.write("\u00d1\7\34\2\2\u00c9\u00d1\7\35\2\2\u00ca\u00d1\7\31")
-        buf.write("\2\2\u00cb\u00d1\5,\27\2\u00cc\u00cd\7\20\2\2\u00cd\u00ce")
-        buf.write("\5\36\20\2\u00ce\u00cf\7\21\2\2\u00cf\u00d1\3\2\2\2\u00d0")
-        buf.write("\u00c7\3\2\2\2\u00d0\u00c8\3\2\2\2\u00d0\u00c9\3\2\2\2")
-        buf.write("\u00d0\u00ca\3\2\2\2\u00d0\u00cb\3\2\2\2\u00d0\u00cc\3")
-        buf.write("\2\2\2\u00d1+\3\2\2\2\u00d2\u00d3\7\32\2\2\u00d3\u00d4")
-        buf.write("\5.\30\2\u00d4-\3\2\2\2\u00d5\u00d6\7\f\2\2\u00d6\u00d7")
-        buf.write("\5\36\20\2\u00d7\u00d8\7\r\2\2\u00d8\u00e0\3\2\2\2\u00d9")
-        buf.write("\u00da\7\f\2\2\u00da\u00db\5\36\20\2\u00db\u00dc\7\r\2")
-        buf.write("\2\u00dc\u00dd\5.\30\2\u00dd\u00e0\3\2\2\2\u00de\u00e0")
-        buf.write("\3\2\2\2\u00df\u00d5\3\2\2\2\u00df\u00d9\3\2\2\2\u00df")
-        buf.write("\u00de\3\2\2\2\u00e0/\3\2\2\2\17\62P`j\u0082\u0092\u00a1")
-        buf.write("\u00a8\u00b4\u00c0\u00c5\u00d0\u00df")
+        buf.write("\3\3\5\3M\n\3\3\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\6\3\6")
+        buf.write("\3\6\3\6\3\6\3\6\5\6]\n\6\3\7\3\7\3\7\3\7\3\7\3\7\3\7")
+        buf.write("\3\7\5\7g\n\7\3\b\3\b\3\b\3\t\3\t\3\t\3\n\3\n\3\13\3\13")
+        buf.write("\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13\3\13")
+        buf.write("\3\13\5\13\177\n\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3")
+        buf.write("\f\3\f\3\r\3\r\3\r\3\r\5\r\u008f\n\r\3\16\3\16\3\16\3")
+        buf.write("\16\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\5\17")
+        buf.write("\u009e\n\17\3\20\3\20\3\20\3\20\3\20\5\20\u00a5\n\20\3")
+        buf.write("\21\3\21\3\21\3\22\3\22\3\22\3\22\3\22\3\22\3\22\5\22")
+        buf.write("\u00b1\n\22\3\23\3\23\3\23\3\24\3\24\3\24\3\24\3\24\3")
+        buf.write("\24\3\24\5\24\u00bd\n\24\3\25\3\25\3\25\5\25\u00c2\n\25")
+        buf.write("\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\3\26\5\26\u00cd")
+        buf.write("\n\26\3\27\3\27\3\27\3\30\3\30\3\30\3\30\3\30\3\30\3\30")
+        buf.write("\3\30\3\30\3\30\5\30\u00dc\n\30\3\30\2\2\31\2\4\6\b\n")
+        buf.write("\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\2\3\3\2\3\5\2\u00e3")
+        buf.write("\2\62\3\2\2\2\4L\3\2\2\2\6N\3\2\2\2\bR\3\2\2\2\n\\\3\2")
+        buf.write("\2\2\ff\3\2\2\2\16h\3\2\2\2\20k\3\2\2\2\22n\3\2\2\2\24")
+        buf.write("~\3\2\2\2\26\u0080\3\2\2\2\30\u008e\3\2\2\2\32\u0090\3")
+        buf.write("\2\2\2\34\u009d\3\2\2\2\36\u00a4\3\2\2\2 \u00a6\3\2\2")
+        buf.write("\2\"\u00b0\3\2\2\2$\u00b2\3\2\2\2&\u00bc\3\2\2\2(\u00c1")
+        buf.write("\3\2\2\2*\u00cc\3\2\2\2,\u00ce\3\2\2\2.\u00db\3\2\2\2")
+        buf.write("\60\63\5\4\3\2\61\63\3\2\2\2\62\60\3\2\2\2\62\61\3\2\2")
+        buf.write("\2\63\3\3\2\2\2\64\65\5\6\4\2\65\66\7\7\2\2\66M\3\2\2")
+        buf.write("\2\678\5\f\7\289\7\7\2\29M\3\2\2\2:;\5\16\b\2;<\7\7\2")
+        buf.write("\2<M\3\2\2\2=>\5\20\t\2>?\7\7\2\2?M\3\2\2\2@A\5\22\n\2")
+        buf.write("AB\7\7\2\2BM\3\2\2\2CM\5\24\13\2DM\5\26\f\2EF\7\n\2\2")
+        buf.write("FG\5\30\r\2GH\7\13\2\2HM\3\2\2\2IJ\7\6\2\2JM\7\7\2\2K")
+        buf.write("M\7\7\2\2L\64\3\2\2\2L\67\3\2\2\2L:\3\2\2\2L=\3\2\2\2")
+        buf.write("L@\3\2\2\2LC\3\2\2\2LD\3\2\2\2LE\3\2\2\2LI\3\2\2\2LK\3")
+        buf.write("\2\2\2M\5\3\2\2\2NO\5\b\5\2OP\7\32\2\2PQ\5\n\6\2Q\7\3")
+        buf.write("\2\2\2RS\t\2\2\2S\t\3\2\2\2TU\7\f\2\2UV\7\33\2\2V]\7\r")
+        buf.write("\2\2WX\7\f\2\2XY\7\33\2\2YZ\7\r\2\2Z]\5\n\6\2[]\3\2\2")
+        buf.write("\2\\T\3\2\2\2\\W\3\2\2\2\\[\3\2\2\2]\13\3\2\2\2^_\5,\27")
+        buf.write("\2_`\7\b\2\2`a\5\36\20\2ag\3\2\2\2bc\5,\27\2cd\7\b\2\2")
+        buf.write("de\5\32\16\2eg\3\2\2\2f^\3\2\2\2fb\3\2\2\2g\r\3\2\2\2")
+        buf.write("hi\7\t\2\2ij\5\36\20\2j\17\3\2\2\2kl\7\16\2\2lm\5,\27")
+        buf.write("\2m\21\3\2\2\2no\7\17\2\2o\23\3\2\2\2pq\7\22\2\2qr\7\20")
+        buf.write("\2\2rs\5\36\20\2st\7\21\2\2tu\5\4\3\2u\177\3\2\2\2vw\7")
+        buf.write("\22\2\2wx\7\20\2\2xy\5\36\20\2yz\7\21\2\2z{\5\4\3\2{|")
+        buf.write("\7\23\2\2|}\5\4\3\2}\177\3\2\2\2~p\3\2\2\2~v\3\2\2\2\177")
+        buf.write("\25\3\2\2\2\u0080\u0081\7\24\2\2\u0081\u0082\7\20\2\2")
+        buf.write("\u0082\u0083\5\f\7\2\u0083\u0084\7\7\2\2\u0084\u0085\5")
+        buf.write("\36\20\2\u0085\u0086\7\7\2\2\u0086\u0087\5\f\7\2\u0087")
+        buf.write("\u0088\7\21\2\2\u0088\u0089\5\4\3\2\u0089\27\3\2\2\2\u008a")
+        buf.write("\u008f\5\4\3\2\u008b\u008c\5\4\3\2\u008c\u008d\5\30\r")
+        buf.write("\2\u008d\u008f\3\2\2\2\u008e\u008a\3\2\2\2\u008e\u008b")
+        buf.write("\3\2\2\2\u008f\31\3\2\2\2\u0090\u0091\7\25\2\2\u0091\u0092")
+        buf.write("\5\b\5\2\u0092\u0093\5\34\17\2\u0093\33\3\2\2\2\u0094")
+        buf.write("\u0095\7\f\2\2\u0095\u0096\5\36\20\2\u0096\u0097\7\r\2")
+        buf.write("\2\u0097\u009e\3\2\2\2\u0098\u0099\7\f\2\2\u0099\u009a")
+        buf.write("\5\36\20\2\u009a\u009b\7\r\2\2\u009b\u009c\5\34\17\2\u009c")
+        buf.write("\u009e\3\2\2\2\u009d\u0094\3\2\2\2\u009d\u0098\3\2\2\2")
+        buf.write("\u009e\35\3\2\2\2\u009f\u00a5\5 \21\2\u00a0\u00a1\5 \21")
+        buf.write("\2\u00a1\u00a2\7\26\2\2\u00a2\u00a3\5 \21\2\u00a3\u00a5")
+        buf.write("\3\2\2\2\u00a4\u009f\3\2\2\2\u00a4\u00a0\3\2\2\2\u00a5")
+        buf.write("\37\3\2\2\2\u00a6\u00a7\5$\23\2\u00a7\u00a8\5\"\22\2\u00a8")
+        buf.write("!\3\2\2\2\u00a9\u00aa\7\27\2\2\u00aa\u00b1\5$\23\2\u00ab")
+        buf.write("\u00ac\7\27\2\2\u00ac\u00ad\5$\23\2\u00ad\u00ae\5\"\22")
+        buf.write("\2\u00ae\u00b1\3\2\2\2\u00af\u00b1\3\2\2\2\u00b0\u00a9")
+        buf.write("\3\2\2\2\u00b0\u00ab\3\2\2\2\u00b0\u00af\3\2\2\2\u00b1")
+        buf.write("#\3\2\2\2\u00b2\u00b3\5(\25\2\u00b3\u00b4\5&\24\2\u00b4")
+        buf.write("%\3\2\2\2\u00b5\u00b6\7\30\2\2\u00b6\u00bd\5(\25\2\u00b7")
+        buf.write("\u00b8\7\30\2\2\u00b8\u00b9\5(\25\2\u00b9\u00ba\5&\24")
+        buf.write("\2\u00ba\u00bd\3\2\2\2\u00bb\u00bd\3\2\2\2\u00bc\u00b5")
+        buf.write("\3\2\2\2\u00bc\u00b7\3\2\2\2\u00bc\u00bb\3\2\2\2\u00bd")
+        buf.write("\'\3\2\2\2\u00be\u00bf\7\27\2\2\u00bf\u00c2\5*\26\2\u00c0")
+        buf.write("\u00c2\5*\26\2\u00c1\u00be\3\2\2\2\u00c1\u00c0\3\2\2\2")
+        buf.write("\u00c2)\3\2\2\2\u00c3\u00cd\7\33\2\2\u00c4\u00cd\7\34")
+        buf.write("\2\2\u00c5\u00cd\7\35\2\2\u00c6\u00cd\7\31\2\2\u00c7\u00cd")
+        buf.write("\5,\27\2\u00c8\u00c9\7\20\2\2\u00c9\u00ca\5\36\20\2\u00ca")
+        buf.write("\u00cb\7\21\2\2\u00cb\u00cd\3\2\2\2\u00cc\u00c3\3\2\2")
+        buf.write("\2\u00cc\u00c4\3\2\2\2\u00cc\u00c5\3\2\2\2\u00cc\u00c6")
+        buf.write("\3\2\2\2\u00cc\u00c7\3\2\2\2\u00cc\u00c8\3\2\2\2\u00cd")
+        buf.write("+\3\2\2\2\u00ce\u00cf\7\32\2\2\u00cf\u00d0\5.\30\2\u00d0")
+        buf.write("-\3\2\2\2\u00d1\u00d2\7\f\2\2\u00d2\u00d3\5\36\20\2\u00d3")
+        buf.write("\u00d4\7\r\2\2\u00d4\u00dc\3\2\2\2\u00d5\u00d6\7\f\2\2")
+        buf.write("\u00d6\u00d7\5\36\20\2\u00d7\u00d8\7\r\2\2\u00d8\u00d9")
+        buf.write("\5.\30\2\u00d9\u00dc\3\2\2\2\u00da\u00dc\3\2\2\2\u00db")
+        buf.write("\u00d1\3\2\2\2\u00db\u00d5\3\2\2\2\u00db\u00da\3\2\2\2")
+        buf.write("\u00dc/\3\2\2\2\17\62L\\f~\u008e\u009d\u00a4\u00b0\u00bc")
+        buf.write("\u00c1\u00cc\u00db")
         return buf.getvalue()
 
 
@@ -248,114 +246,61 @@ class gramaticaAntlrParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-
-        def getRuleIndex(self):
-            return gramaticaAntlrParser.RULE_statement
-
-     
-        def copyFrom(self, ctx:ParserRuleContext):
-            super().copyFrom(ctx)
-
-
-
-    class EndLineContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a gramaticaAntlrParser.StatementContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def ENDLINE(self):
-            return self.getToken(gramaticaAntlrParser.ENDLINE, 0)
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEndLine" ):
-                listener.enterEndLine(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEndLine" ):
-                listener.exitEndLine(self)
-
-
-    class BreakContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a gramaticaAntlrParser.StatementContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def BREAK(self):
-            return self.getToken(gramaticaAntlrParser.BREAK, 0)
-        def ENDLINE(self):
-            return self.getToken(gramaticaAntlrParser.ENDLINE, 0)
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBreak" ):
-                listener.enterBreak(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBreak" ):
-                listener.exitBreak(self)
-
-
-    class BinaryListOpContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a gramaticaAntlrParser.StatementContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def CHAVEA(self):
-            return self.getToken(gramaticaAntlrParser.CHAVEA, 0)
-        def statelist(self):
-            return self.getTypedRuleContext(gramaticaAntlrParser.StatelistContext,0)
-
-        def CHAVEF(self):
-            return self.getToken(gramaticaAntlrParser.CHAVEF, 0)
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBinaryListOp" ):
-                listener.enterBinaryListOp(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBinaryListOp" ):
-                listener.exitBinaryListOp(self)
-
-
-    class BinaryOpContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a gramaticaAntlrParser.StatementContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
         def vardecl(self):
             return self.getTypedRuleContext(gramaticaAntlrParser.VardeclContext,0)
 
+
         def ENDLINE(self):
             return self.getToken(gramaticaAntlrParser.ENDLINE, 0)
+
         def atribstat(self):
             return self.getTypedRuleContext(gramaticaAntlrParser.AtribstatContext,0)
+
 
         def printstat(self):
             return self.getTypedRuleContext(gramaticaAntlrParser.PrintstatContext,0)
 
+
         def readstat(self):
             return self.getTypedRuleContext(gramaticaAntlrParser.ReadstatContext,0)
+
 
         def returnstat(self):
             return self.getTypedRuleContext(gramaticaAntlrParser.ReturnstatContext,0)
 
+
         def ifstat(self):
             return self.getTypedRuleContext(gramaticaAntlrParser.IfstatContext,0)
+
 
         def forstat(self):
             return self.getTypedRuleContext(gramaticaAntlrParser.ForstatContext,0)
 
 
+        def CHAVEA(self):
+            return self.getToken(gramaticaAntlrParser.CHAVEA, 0)
+
+        def statelist(self):
+            return self.getTypedRuleContext(gramaticaAntlrParser.StatelistContext,0)
+
+
+        def CHAVEF(self):
+            return self.getToken(gramaticaAntlrParser.CHAVEF, 0)
+
+        def BREAK(self):
+            return self.getToken(gramaticaAntlrParser.BREAK, 0)
+
+        def getRuleIndex(self):
+            return gramaticaAntlrParser.RULE_statement
+
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBinaryOp" ):
-                listener.enterBinaryOp(self)
+            if hasattr( listener, "enterStatement" ):
+                listener.enterStatement(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBinaryOp" ):
-                listener.exitBinaryOp(self)
+            if hasattr( listener, "exitStatement" ):
+                listener.exitStatement(self)
+
 
 
 
@@ -364,11 +309,10 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_statement)
         try:
-            self.state = 78
+            self.state = 74
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [gramaticaAntlrParser.INT, gramaticaAntlrParser.STRING, gramaticaAntlrParser.FLOAT]:
-                localctx = gramaticaAntlrParser.BinaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 50
                 self.vardecl()
@@ -376,7 +320,6 @@ class gramaticaAntlrParser ( Parser ):
                 self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.IDENT]:
-                localctx = gramaticaAntlrParser.BinaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 53
                 self.atribstat()
@@ -384,7 +327,6 @@ class gramaticaAntlrParser ( Parser ):
                 self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.PRINT]:
-                localctx = gramaticaAntlrParser.BinaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 56
                 self.printstat()
@@ -392,7 +334,6 @@ class gramaticaAntlrParser ( Parser ):
                 self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.READ]:
-                localctx = gramaticaAntlrParser.BinaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
                 self.state = 59
                 self.readstat()
@@ -400,7 +341,6 @@ class gramaticaAntlrParser ( Parser ):
                 self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.RETURN]:
-                localctx = gramaticaAntlrParser.BinaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 5)
                 self.state = 62
                 self.returnstat()
@@ -408,43 +348,34 @@ class gramaticaAntlrParser ( Parser ):
                 self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.IF]:
-                localctx = gramaticaAntlrParser.BinaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
                 self.state = 65
                 self.ifstat()
-                self.state = 66
-                self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.FOR]:
-                localctx = gramaticaAntlrParser.BinaryOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 7)
-                self.state = 68
+                self.state = 66
                 self.forstat()
-                self.state = 69
-                self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.CHAVEA]:
-                localctx = gramaticaAntlrParser.BinaryListOpContext(self, localctx)
                 self.enterOuterAlt(localctx, 8)
-                self.state = 71
+                self.state = 67
                 self.match(gramaticaAntlrParser.CHAVEA)
-                self.state = 72
+                self.state = 68
                 self.statelist()
-                self.state = 73
+                self.state = 69
                 self.match(gramaticaAntlrParser.CHAVEF)
                 pass
             elif token in [gramaticaAntlrParser.BREAK]:
-                localctx = gramaticaAntlrParser.BreakContext(self, localctx)
                 self.enterOuterAlt(localctx, 9)
-                self.state = 75
+                self.state = 71
                 self.match(gramaticaAntlrParser.BREAK)
-                self.state = 76
+                self.state = 72
                 self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             elif token in [gramaticaAntlrParser.ENDLINE]:
-                localctx = gramaticaAntlrParser.EndLineContext(self, localctx)
                 self.enterOuterAlt(localctx, 10)
-                self.state = 77
+                self.state = 73
                 self.match(gramaticaAntlrParser.ENDLINE)
                 pass
             else:
@@ -495,11 +426,11 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_vardecl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 80
+            self.state = 76
             self.a()
-            self.state = 81
+            self.state = 77
             self.match(gramaticaAntlrParser.IDENT)
-            self.state = 82
+            self.state = 78
             self.b()
         except RecognitionException as re:
             localctx.exception = re
@@ -545,7 +476,7 @@ class gramaticaAntlrParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 84
+            self.state = 80
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << gramaticaAntlrParser.INT) | (1 << gramaticaAntlrParser.STRING) | (1 << gramaticaAntlrParser.FLOAT))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -598,28 +529,28 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.BContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_b)
         try:
-            self.state = 94
+            self.state = 90
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 86
+                self.state = 82
                 self.match(gramaticaAntlrParser.COLCHA)
-                self.state = 87
+                self.state = 83
                 self.match(gramaticaAntlrParser.INT_CONSTANT)
-                self.state = 88
+                self.state = 84
                 self.match(gramaticaAntlrParser.COLCHF)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 89
+                self.state = 85
                 self.match(gramaticaAntlrParser.COLCHA)
-                self.state = 90
+                self.state = 86
                 self.match(gramaticaAntlrParser.INT_CONSTANT)
-                self.state = 91
+                self.state = 87
                 self.match(gramaticaAntlrParser.COLCHF)
-                self.state = 92
+                self.state = 88
                 self.b()
                 pass
 
@@ -677,26 +608,26 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.AtribstatContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_atribstat)
         try:
-            self.state = 104
+            self.state = 100
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 96
+                self.state = 92
                 self.lvalue()
-                self.state = 97
+                self.state = 93
                 self.match(gramaticaAntlrParser.EQUAL)
-                self.state = 98
+                self.state = 94
                 self.expression()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 100
+                self.state = 96
                 self.lvalue()
-                self.state = 101
+                self.state = 97
                 self.match(gramaticaAntlrParser.EQUAL)
-                self.state = 102
+                self.state = 98
                 self.allocexpression()
                 pass
 
@@ -742,9 +673,9 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_printstat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 106
+            self.state = 102
             self.match(gramaticaAntlrParser.PRINT)
-            self.state = 107
+            self.state = 103
             self.expression()
         except RecognitionException as re:
             localctx.exception = re
@@ -787,9 +718,9 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_readstat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 105
             self.match(gramaticaAntlrParser.READ)
-            self.state = 110
+            self.state = 106
             self.lvalue()
         except RecognitionException as re:
             localctx.exception = re
@@ -828,7 +759,7 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_returnstat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 112
+            self.state = 108
             self.match(gramaticaAntlrParser.RETURN)
         except RecognitionException as re:
             localctx.exception = re
@@ -886,38 +817,38 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.IfstatContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_ifstat)
         try:
-            self.state = 128
+            self.state = 124
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 114
+                self.state = 110
                 self.match(gramaticaAntlrParser.IF)
-                self.state = 115
+                self.state = 111
                 self.match(gramaticaAntlrParser.PARENTEA)
-                self.state = 116
+                self.state = 112
                 self.expression()
-                self.state = 117
+                self.state = 113
                 self.match(gramaticaAntlrParser.PARENTEF)
-                self.state = 118
+                self.state = 114
                 self.statement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 120
+                self.state = 116
                 self.match(gramaticaAntlrParser.IF)
-                self.state = 121
+                self.state = 117
                 self.match(gramaticaAntlrParser.PARENTEA)
-                self.state = 122
+                self.state = 118
                 self.expression()
-                self.state = 123
+                self.state = 119
                 self.match(gramaticaAntlrParser.PARENTEF)
-                self.state = 124
+                self.state = 120
                 self.statement()
-                self.state = 125
+                self.state = 121
                 self.match(gramaticaAntlrParser.ELSE)
-                self.state = 126
+                self.state = 122
                 self.statement()
                 pass
 
@@ -986,23 +917,23 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_forstat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 130
+            self.state = 126
             self.match(gramaticaAntlrParser.FOR)
-            self.state = 131
+            self.state = 127
             self.match(gramaticaAntlrParser.PARENTEA)
+            self.state = 128
+            self.atribstat()
+            self.state = 129
+            self.match(gramaticaAntlrParser.ENDLINE)
+            self.state = 130
+            self.expression()
+            self.state = 131
+            self.match(gramaticaAntlrParser.ENDLINE)
             self.state = 132
             self.atribstat()
             self.state = 133
-            self.match(gramaticaAntlrParser.ENDLINE)
-            self.state = 134
-            self.expression()
-            self.state = 135
-            self.match(gramaticaAntlrParser.ENDLINE)
-            self.state = 136
-            self.atribstat()
-            self.state = 137
             self.match(gramaticaAntlrParser.PARENTEF)
-            self.state = 138
+            self.state = 134
             self.statement()
         except RecognitionException as re:
             localctx.exception = re
@@ -1045,20 +976,20 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.StatelistContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_statelist)
         try:
-            self.state = 144
+            self.state = 140
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 140
+                self.state = 136
                 self.statement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 141
+                self.state = 137
                 self.statement()
-                self.state = 142
+                self.state = 138
                 self.statelist()
                 pass
 
@@ -1108,11 +1039,11 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 24, self.RULE_allocexpression)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 146
+            self.state = 142
             self.match(gramaticaAntlrParser.NEW)
-            self.state = 147
+            self.state = 143
             self.a()
-            self.state = 148
+            self.state = 144
             self.c()
         except RecognitionException as re:
             localctx.exception = re
@@ -1161,28 +1092,28 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.CContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_c)
         try:
-            self.state = 159
+            self.state = 155
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
+                self.state = 146
+                self.match(gramaticaAntlrParser.COLCHA)
+                self.state = 147
+                self.expression()
+                self.state = 148
+                self.match(gramaticaAntlrParser.COLCHF)
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
                 self.state = 150
                 self.match(gramaticaAntlrParser.COLCHA)
                 self.state = 151
                 self.expression()
                 self.state = 152
                 self.match(gramaticaAntlrParser.COLCHF)
-                pass
-
-            elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 154
-                self.match(gramaticaAntlrParser.COLCHA)
-                self.state = 155
-                self.expression()
-                self.state = 156
-                self.match(gramaticaAntlrParser.COLCHF)
-                self.state = 157
+                self.state = 153
                 self.c()
                 pass
 
@@ -1230,22 +1161,22 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.ExpressionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_expression)
         try:
-            self.state = 166
+            self.state = 162
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 161
+                self.state = 157
                 self.numexpression()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 162
+                self.state = 158
                 self.numexpression()
-                self.state = 163
+                self.state = 159
                 self.match(gramaticaAntlrParser.COMPARADORES)
-                self.state = 164
+                self.state = 160
                 self.numexpression()
                 pass
 
@@ -1292,9 +1223,9 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 30, self.RULE_numexpression)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 168
+            self.state = 164
             self.term()
-            self.state = 169
+            self.state = 165
             self.n()
         except RecognitionException as re:
             localctx.exception = re
@@ -1340,24 +1271,24 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.NContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_n)
         try:
-            self.state = 178
+            self.state = 174
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 171
+                self.state = 167
                 self.match(gramaticaAntlrParser.MAISOUMENOS)
-                self.state = 172
+                self.state = 168
                 self.term()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 173
+                self.state = 169
                 self.match(gramaticaAntlrParser.MAISOUMENOS)
-                self.state = 174
+                self.state = 170
                 self.term()
-                self.state = 175
+                self.state = 171
                 self.n()
                 pass
 
@@ -1409,9 +1340,9 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 34, self.RULE_term)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 180
+            self.state = 176
             self.unaryexpr()
-            self.state = 181
+            self.state = 177
             self.e()
         except RecognitionException as re:
             localctx.exception = re
@@ -1457,24 +1388,24 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.EContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_e)
         try:
-            self.state = 190
+            self.state = 186
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 183
+                self.state = 179
                 self.match(gramaticaAntlrParser.MDP)
-                self.state = 184
+                self.state = 180
                 self.unaryexpr()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 185
+                self.state = 181
                 self.match(gramaticaAntlrParser.MDP)
-                self.state = 186
+                self.state = 182
                 self.unaryexpr()
-                self.state = 187
+                self.state = 183
                 self.e()
                 pass
 
@@ -1524,19 +1455,19 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.UnaryexprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_unaryexpr)
         try:
-            self.state = 195
+            self.state = 191
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [gramaticaAntlrParser.MAISOUMENOS]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 192
+                self.state = 188
                 self.match(gramaticaAntlrParser.MAISOUMENOS)
-                self.state = 193
+                self.state = 189
                 self.factor()
                 pass
             elif token in [gramaticaAntlrParser.PARENTEA, gramaticaAntlrParser.NULL, gramaticaAntlrParser.IDENT, gramaticaAntlrParser.INT_CONSTANT, gramaticaAntlrParser.FLOAT_CONSTANT, gramaticaAntlrParser.STRING_CONSTANT]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 194
+                self.state = 190
                 self.factor()
                 pass
             else:
@@ -1601,41 +1532,41 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.FactorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_factor)
         try:
-            self.state = 206
+            self.state = 202
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [gramaticaAntlrParser.INT_CONSTANT]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 197
+                self.state = 193
                 self.match(gramaticaAntlrParser.INT_CONSTANT)
                 pass
             elif token in [gramaticaAntlrParser.FLOAT_CONSTANT]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 198
+                self.state = 194
                 self.match(gramaticaAntlrParser.FLOAT_CONSTANT)
                 pass
             elif token in [gramaticaAntlrParser.STRING_CONSTANT]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 199
+                self.state = 195
                 self.match(gramaticaAntlrParser.STRING_CONSTANT)
                 pass
             elif token in [gramaticaAntlrParser.NULL]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 200
+                self.state = 196
                 self.match(gramaticaAntlrParser.NULL)
                 pass
             elif token in [gramaticaAntlrParser.IDENT]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 201
+                self.state = 197
                 self.lvalue()
                 pass
             elif token in [gramaticaAntlrParser.PARENTEA]:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 202
+                self.state = 198
                 self.match(gramaticaAntlrParser.PARENTEA)
-                self.state = 203
+                self.state = 199
                 self.expression()
-                self.state = 204
+                self.state = 200
                 self.match(gramaticaAntlrParser.PARENTEF)
                 pass
             else:
@@ -1682,9 +1613,9 @@ class gramaticaAntlrParser ( Parser ):
         self.enterRule(localctx, 42, self.RULE_lvalue)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 208
+            self.state = 204
             self.match(gramaticaAntlrParser.IDENT)
-            self.state = 209
+            self.state = 205
             self.g()
         except RecognitionException as re:
             localctx.exception = re
@@ -1733,28 +1664,28 @@ class gramaticaAntlrParser ( Parser ):
         localctx = gramaticaAntlrParser.GContext(self, self._ctx, self.state)
         self.enterRule(localctx, 44, self.RULE_g)
         try:
-            self.state = 221
+            self.state = 217
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
+                self.state = 207
+                self.match(gramaticaAntlrParser.COLCHA)
+                self.state = 208
+                self.expression()
+                self.state = 209
+                self.match(gramaticaAntlrParser.COLCHF)
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
                 self.state = 211
                 self.match(gramaticaAntlrParser.COLCHA)
                 self.state = 212
                 self.expression()
                 self.state = 213
                 self.match(gramaticaAntlrParser.COLCHF)
-                pass
-
-            elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 215
-                self.match(gramaticaAntlrParser.COLCHA)
-                self.state = 216
-                self.expression()
-                self.state = 217
-                self.match(gramaticaAntlrParser.COLCHF)
-                self.state = 218
+                self.state = 214
                 self.g()
                 pass
 

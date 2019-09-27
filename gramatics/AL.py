@@ -10,10 +10,12 @@ def main(argv):
     lexer = gramaticaAntlrLexer(input_stream)
     stream = CommonTokenStream(lexer)
     stream.getNumberOfOnChannelTokens()
-    for x in stream.getTokens(0, 1000):
-        print(x)
+    for x in stream.getTokens(0,1000):
+        print(x.text)
     parser = gramaticaAntlrParser(stream)
     tree = parser.program()
+    print(tree.getText())
+    
 
 
 if __name__ == '__main__':
