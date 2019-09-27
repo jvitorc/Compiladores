@@ -19,7 +19,8 @@ public class gramaticaAntlrParser extends Parser {
 		INT=1, STRING=2, FLOAT=3, BREAK=4, ENDLINE=5, EQUAL=6, PRINT=7, CHAVEA=8, 
 		CHAVEF=9, COLCHA=10, COLCHF=11, READ=12, RETURN=13, PARENTEA=14, PARENTEF=15, 
 		IF=16, ELSE=17, FOR=18, NEW=19, COMPARADORES=20, MAISOUMENOS=21, MDP=22, 
-		NULL=23, IDENT=24, INT_CONSTANT=25, FLOAT_CONSTANT=26, STRING_CONSTANT=27;
+		NULL=23, IDENT=24, INT_CONSTANT=25, FLOAT_CONSTANT=26, STRING_CONSTANT=27, 
+		WS=28;
 	public static final int
 		RULE_program = 0, RULE_statement = 1, RULE_vardecl = 2, RULE_a = 3, RULE_b = 4, 
 		RULE_atribstat = 5, RULE_printstat = 6, RULE_readstat = 7, RULE_returnstat = 8, 
@@ -43,7 +44,8 @@ public class gramaticaAntlrParser extends Parser {
 		null, "INT", "STRING", "FLOAT", "BREAK", "ENDLINE", "EQUAL", "PRINT", 
 		"CHAVEA", "CHAVEF", "COLCHA", "COLCHF", "READ", "RETURN", "PARENTEA", 
 		"PARENTEF", "IF", "ELSE", "FOR", "NEW", "COMPARADORES", "MAISOUMENOS", 
-		"MDP", "NULL", "IDENT", "INT_CONSTANT", "FLOAT_CONSTANT", "STRING_CONSTANT"
+		"MDP", "NULL", "IDENT", "INT_CONSTANT", "FLOAT_CONSTANT", "STRING_CONSTANT", 
+		"WS"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -711,8 +713,8 @@ public class gramaticaAntlrParser extends Parser {
 		public TerminalNode ENDLINE(int i) {
 			return getToken(gramaticaAntlrParser.ENDLINE, i);
 		}
-		public NumexpressionContext numexpression() {
-			return getRuleContext(NumexpressionContext.class,0);
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
 		}
 		public TerminalNode PARENTEF() { return getToken(gramaticaAntlrParser.PARENTEF, 0); }
 		public StatementContext statement() {
@@ -739,7 +741,7 @@ public class gramaticaAntlrParser extends Parser {
 			setState(133);
 			match(ENDLINE);
 			setState(134);
-			numexpression();
+			expression();
 			setState(135);
 			match(ENDLINE);
 			setState(136);
@@ -1390,7 +1392,7 @@ public class gramaticaAntlrParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\35\u00e2\4\2\t\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\36\u00e2\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\3\2\3\2\5"+
@@ -1429,24 +1431,24 @@ public class gramaticaAntlrParser extends Parser {
 		"\2\2|}\5\36\20\2}~\7\21\2\2~\177\5\4\3\2\177\u0080\7\23\2\2\u0080\u0081"+
 		"\5\4\3\2\u0081\u0083\3\2\2\2\u0082t\3\2\2\2\u0082z\3\2\2\2\u0083\25\3"+
 		"\2\2\2\u0084\u0085\7\24\2\2\u0085\u0086\7\20\2\2\u0086\u0087\5\f\7\2\u0087"+
-		"\u0088\7\7\2\2\u0088\u0089\5 \21\2\u0089\u008a\7\7\2\2\u008a\u008b\5\f"+
-		"\7\2\u008b\u008c\7\21\2\2\u008c\u008d\5\4\3\2\u008d\27\3\2\2\2\u008e\u0093"+
-		"\5\4\3\2\u008f\u0090\5\4\3\2\u0090\u0091\5\30\r\2\u0091\u0093\3\2\2\2"+
-		"\u0092\u008e\3\2\2\2\u0092\u008f\3\2\2\2\u0093\31\3\2\2\2\u0094\u0095"+
-		"\7\25\2\2\u0095\u0096\5\b\5\2\u0096\u0097\5\34\17\2\u0097\33\3\2\2\2\u0098"+
-		"\u0099\7\f\2\2\u0099\u009a\5\36\20\2\u009a\u009b\7\r\2\2\u009b\u00a2\3"+
-		"\2\2\2\u009c\u009d\7\f\2\2\u009d\u009e\5\36\20\2\u009e\u009f\7\r\2\2\u009f"+
-		"\u00a0\5\34\17\2\u00a0\u00a2\3\2\2\2\u00a1\u0098\3\2\2\2\u00a1\u009c\3"+
-		"\2\2\2\u00a2\35\3\2\2\2\u00a3\u00a9\5 \21\2\u00a4\u00a5\5 \21\2\u00a5"+
-		"\u00a6\7\26\2\2\u00a6\u00a7\5 \21\2\u00a7\u00a9\3\2\2\2\u00a8\u00a3\3"+
-		"\2\2\2\u00a8\u00a4\3\2\2\2\u00a9\37\3\2\2\2\u00aa\u00ab\5$\23\2\u00ab"+
-		"\u00ac\5\"\22\2\u00ac!\3\2\2\2\u00ad\u00ae\7\27\2\2\u00ae\u00b5\5$\23"+
-		"\2\u00af\u00b0\7\27\2\2\u00b0\u00b1\5$\23\2\u00b1\u00b2\5\"\22\2\u00b2"+
-		"\u00b5\3\2\2\2\u00b3\u00b5\3\2\2\2\u00b4\u00ad\3\2\2\2\u00b4\u00af\3\2"+
-		"\2\2\u00b4\u00b3\3\2\2\2\u00b5#\3\2\2\2\u00b6\u00b7\5(\25\2\u00b7\u00b8"+
-		"\5&\24\2\u00b8%\3\2\2\2\u00b9\u00ba\7\30\2\2\u00ba\u00c1\5(\25\2\u00bb"+
-		"\u00bc\7\30\2\2\u00bc\u00bd\5(\25\2\u00bd\u00be\5&\24\2\u00be\u00c1\3"+
-		"\2\2\2\u00bf\u00c1\3\2\2\2\u00c0\u00b9\3\2\2\2\u00c0\u00bb\3\2\2\2\u00c0"+
+		"\u0088\7\7\2\2\u0088\u0089\5\36\20\2\u0089\u008a\7\7\2\2\u008a\u008b\5"+
+		"\f\7\2\u008b\u008c\7\21\2\2\u008c\u008d\5\4\3\2\u008d\27\3\2\2\2\u008e"+
+		"\u0093\5\4\3\2\u008f\u0090\5\4\3\2\u0090\u0091\5\30\r\2\u0091\u0093\3"+
+		"\2\2\2\u0092\u008e\3\2\2\2\u0092\u008f\3\2\2\2\u0093\31\3\2\2\2\u0094"+
+		"\u0095\7\25\2\2\u0095\u0096\5\b\5\2\u0096\u0097\5\34\17\2\u0097\33\3\2"+
+		"\2\2\u0098\u0099\7\f\2\2\u0099\u009a\5\36\20\2\u009a\u009b\7\r\2\2\u009b"+
+		"\u00a2\3\2\2\2\u009c\u009d\7\f\2\2\u009d\u009e\5\36\20\2\u009e\u009f\7"+
+		"\r\2\2\u009f\u00a0\5\34\17\2\u00a0\u00a2\3\2\2\2\u00a1\u0098\3\2\2\2\u00a1"+
+		"\u009c\3\2\2\2\u00a2\35\3\2\2\2\u00a3\u00a9\5 \21\2\u00a4\u00a5\5 \21"+
+		"\2\u00a5\u00a6\7\26\2\2\u00a6\u00a7\5 \21\2\u00a7\u00a9\3\2\2\2\u00a8"+
+		"\u00a3\3\2\2\2\u00a8\u00a4\3\2\2\2\u00a9\37\3\2\2\2\u00aa\u00ab\5$\23"+
+		"\2\u00ab\u00ac\5\"\22\2\u00ac!\3\2\2\2\u00ad\u00ae\7\27\2\2\u00ae\u00b5"+
+		"\5$\23\2\u00af\u00b0\7\27\2\2\u00b0\u00b1\5$\23\2\u00b1\u00b2\5\"\22\2"+
+		"\u00b2\u00b5\3\2\2\2\u00b3\u00b5\3\2\2\2\u00b4\u00ad\3\2\2\2\u00b4\u00af"+
+		"\3\2\2\2\u00b4\u00b3\3\2\2\2\u00b5#\3\2\2\2\u00b6\u00b7\5(\25\2\u00b7"+
+		"\u00b8\5&\24\2\u00b8%\3\2\2\2\u00b9\u00ba\7\30\2\2\u00ba\u00c1\5(\25\2"+
+		"\u00bb\u00bc\7\30\2\2\u00bc\u00bd\5(\25\2\u00bd\u00be\5&\24\2\u00be\u00c1"+
+		"\3\2\2\2\u00bf\u00c1\3\2\2\2\u00c0\u00b9\3\2\2\2\u00c0\u00bb\3\2\2\2\u00c0"+
 		"\u00bf\3\2\2\2\u00c1\'\3\2\2\2\u00c2\u00c3\7\27\2\2\u00c3\u00c6\5*\26"+
 		"\2\u00c4\u00c6\5*\26\2\u00c5\u00c2\3\2\2\2\u00c5\u00c4\3\2\2\2\u00c6)"+
 		"\3\2\2\2\u00c7\u00d1\7\33\2\2\u00c8\u00d1\7\34\2\2\u00c9\u00d1\7\35\2"+

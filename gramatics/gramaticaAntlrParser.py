@@ -58,9 +58,9 @@ def serializedATN():
         buf.write("\5\4\3\2\u0081\u0083\3\2\2\2\u0082t\3\2\2\2\u0082z\3\2")
         buf.write("\2\2\u0083\25\3\2\2\2\u0084\u0085\7\24\2\2\u0085\u0086")
         buf.write("\7\20\2\2\u0086\u0087\5\f\7\2\u0087\u0088\7\7\2\2\u0088")
-        buf.write("\u0089\5 \21\2\u0089\u008a\7\7\2\2\u008a\u008b\5\f\7\2")
-        buf.write("\u008b\u008c\7\21\2\2\u008c\u008d\5\4\3\2\u008d\27\3\2")
-        buf.write("\2\2\u008e\u0093\5\4\3\2\u008f\u0090\5\4\3\2\u0090\u0091")
+        buf.write("\u0089\5\36\20\2\u0089\u008a\7\7\2\2\u008a\u008b\5\f\7")
+        buf.write("\2\u008b\u008c\7\21\2\2\u008c\u008d\5\4\3\2\u008d\27\3")
+        buf.write("\2\2\2\u008e\u0093\5\4\3\2\u008f\u0090\5\4\3\2\u0090\u0091")
         buf.write("\5\30\r\2\u0091\u0093\3\2\2\2\u0092\u008e\3\2\2\2\u0092")
         buf.write("\u008f\3\2\2\2\u0093\31\3\2\2\2\u0094\u0095\7\25\2\2\u0095")
         buf.write("\u0096\5\b\5\2\u0096\u0097\5\34\17\2\u0097\33\3\2\2\2")
@@ -955,8 +955,8 @@ class gramaticaAntlrParser ( Parser ):
             else:
                 return self.getToken(gramaticaAntlrParser.ENDLINE, i)
 
-        def numexpression(self):
-            return self.getTypedRuleContext(gramaticaAntlrParser.NumexpressionContext,0)
+        def expression(self):
+            return self.getTypedRuleContext(gramaticaAntlrParser.ExpressionContext,0)
 
 
         def PARENTEF(self):
@@ -995,7 +995,7 @@ class gramaticaAntlrParser ( Parser ):
             self.state = 133
             self.match(gramaticaAntlrParser.ENDLINE)
             self.state = 134
-            self.numexpression()
+            self.expression()
             self.state = 135
             self.match(gramaticaAntlrParser.ENDLINE)
             self.state = 136

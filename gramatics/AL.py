@@ -12,8 +12,8 @@ def main(argv):
     stream.getNumberOfOnChannelTokens()
     for x in stream.getTokens(0, 1000):
         print(x)
-    # parser = gramaticaAntlrParser(stream)
-    # tree = parser.program()
+    parser = gramaticaAntlrParser(stream)
+    tree = parser.program()
 
 
 if __name__ == '__main__':

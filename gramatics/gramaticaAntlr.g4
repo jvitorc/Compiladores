@@ -39,7 +39,7 @@ ifstat: IF PARENTEA expression PARENTEF statement
         | IF PARENTEA expression PARENTEF statement ELSE statement
         ;
 
-forstat: FOR PARENTEA atribstat ENDLINE numexpression ENDLINE atribstat PARENTEF statement;
+forstat: FOR PARENTEA atribstat ENDLINE expression ENDLINE atribstat PARENTEF statement;
 
 statelist: statement
             | statement statelist
