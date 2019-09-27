@@ -114,8 +114,7 @@ class gramaticaAntlrParser ( Parser ):
                      "';'", "'='", "'print'", "'{'", "'}'", "'['", "']'", 
                      "'read'", "'return'", "'('", "')'", "'if'", "'else'", 
                      "'for'", "'new'", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'null'", "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'[ \r\t\n]+'" ]
+                     "'null'" ]
 
     symbolicNames = [ "<INVALID>", "INT", "STRING", "FLOAT", "BREAK", "ENDLINE", 
                       "EQUAL", "PRINT", "CHAVEA", "CHAVEF", "COLCHA", "COLCHF", 

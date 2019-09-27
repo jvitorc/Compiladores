@@ -3,15 +3,18 @@ import sys
 from antlr4 import *
 from gramaticaAntlrLexer import gramaticaAntlrLexer
 from gramaticaAntlrParser import gramaticaAntlrParser
- 
+
+
 def main(argv):
-a = open('teste_professor.txt', 'rt', encoding='ascii')
-input_stream = a
-print(type(input_stream))
-lexer = gramaticaAntlrLexer(input_stream)
-stream = CommonTokenStream(lexer)
+    input_stream = FileStream(argv[1])
+    lexer = gramaticaAntlrLexer(input_stream)
+    stream = CommonTokenStream(lexer)
+    stream.getNumberOfOnChannelTokens()
+    for x in stream.getTokens(0, 1000):
+        print(x)
     # parser = gramaticaAntlrParser(stream)
-    # tree = parser.startRule()
- 
+    # tree = parser.program()
+
+
 if __name__ == '__main__':
     main(sys.argv)
