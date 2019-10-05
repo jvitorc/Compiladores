@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     PROGRAM: STATEMENT
             |
             ;
@@ -13,6 +14,11 @@
             | 'break' ';'
             | ';'
             ;
+=======
+    PROGRAM -> STATEMENT|&
+    STATEMENT -> VARDECL; | ATRIBSTAT; | PRINTSTAT; | READSTAT; | RETURNSTAT;
+                | IFSTAT; | FORSTAT; | {STATELIST} | break; | ;
+>>>>>>> 1bec48ab4f4a62f8585d98d20b6007aa4e304cf5
     
     VARDECL: A ident B
     
@@ -27,7 +33,7 @@
 
     IFSTAT: if(EXPRESSION) STATEMENT | if(EXPRESSION) STATEMENT else STATEMENT
 
-    FORSTAT: for(ATRIBSTAT';' NUMEXPRESSION';' ATRIBSTAT) STATEMENT
+    FORSTAT: for(ATRIBSTAT; NUMEXPRESSION; ATRIBSTAT) STATEMENT
 
     STATELIST: STATEMENT | STATEMENT STATELIST
 
@@ -48,7 +54,13 @@
 
     UNARYEXPR: MAISOUMENOS FACTOR | FACTOR
 
+<<<<<<< HEAD
     FACTOR: int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION)
+=======
+    
+    FACTOR: int_constant | float_constant | string_constant | null | LVALUE 
+                | (EXPRESSION)
+>>>>>>> 1bec48ab4f4a62f8585d98d20b6007aa4e304cf5
 
     LVALUE: ident G
     G: [EXPRESSION] | [EXPRESSION]G | &
