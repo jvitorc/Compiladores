@@ -2,16 +2,16 @@
             |
             ;
     
-    STATEMENT: VARDECL ';' #BinaryOp 
-            | ATRIBSTAT ';' #BinaryOp
-            | PRINTSTAT ';' #BinaryOp
-            | READSTAT ';' #BinaryOp
-            | RETURNSTAT ';' #BinaryOp
-            | IFSTAT ';' #BinaryOp
-            | FORSTAT ';' #BinaryOp
-            | '{' STATELIST '}' #BinaryListOp 
-            | 'break' ';' #Break
-            | ';' #EndLine
+    STATEMENT: VARDECL ';'
+            | ATRIBSTAT ';'
+            | PRINTSTAT ';'
+            | READSTAT ';'
+            | RETURNSTAT ';'
+            | IFSTAT
+            | FORSTAT
+            | '{' STATELIST '}'
+            | 'break' ';'
+            | ';'
             ;
     
     VARDECL: A ident B
@@ -48,7 +48,6 @@
 
     UNARYEXPR: MAISOUMENOS FACTOR | FACTOR
 
-    #Colocamos EXPRESSION entre parênteses porque é uma expressão, mas não temos certeza
     FACTOR: int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION)
 
     LVALUE: ident G

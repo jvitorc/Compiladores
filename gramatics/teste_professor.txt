@@ -17,6 +17,36 @@
   }
 }
 
+{
+  string a;
+  int b;
+  a = "BANANA";
+  b = 10;
+  int i;
+  for (i = 0; i <= b; i = i + 1)
+    print i;
+  if (a == "BANANA") {
+    print a;
+  } else {
+    print "Não é uma BANANA";
+  }
+}
+
+{
+  float c;
+  int d;
+  c = 0.0001;
+  d = 10;
+  int i;
+  for (i = 0; i < d; i = i + 1) {
+    c = c + i;
+    if(c < 10) {
+      print "C é menor que 10";
+    } else {
+      print "C é maior ou igual que 10";
+    }
+  }
+}
 
 {
   int y;
