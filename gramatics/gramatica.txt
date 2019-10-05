@@ -1,18 +1,6 @@
-    PROGRAM: STATEMENT
-            |
-            ;
-    
-    STATEMENT: VARDECL ';' #BinaryOp 
-            | ATRIBSTAT ';' #BinaryOp
-            | PRINTSTAT ';' #BinaryOp
-            | READSTAT ';' #BinaryOp
-            | RETURNSTAT ';' #BinaryOp
-            | IFSTAT ';' #BinaryOp
-            | FORSTAT ';' #BinaryOp
-            | '{' STATELIST '}' #BinaryListOp 
-            | 'break' ';' #Break
-            | ';' #EndLine
-            ;
+    PROGRAM -> STATEMENT|&
+    STATEMENT -> VARDECL; | ATRIBSTAT; | PRINTSTAT; | READSTAT; | RETURNSTAT;
+                | IFSTAT; | FORSTAT; | {STATELIST} | break; | ;
     
     VARDECL: A ident B
     
@@ -27,7 +15,7 @@
 
     IFSTAT: if(EXPRESSION) STATEMENT | if(EXPRESSION) STATEMENT else STATEMENT
 
-    FORSTAT: for(ATRIBSTAT';' NUMEXPRESSION';' ATRIBSTAT) STATEMENT
+    FORSTAT: for(ATRIBSTAT; NUMEXPRESSION; ATRIBSTAT) STATEMENT
 
     STATELIST: STATEMENT | STATEMENT STATELIST
 
@@ -48,8 +36,9 @@
 
     UNARYEXPR: MAISOUMENOS FACTOR | FACTOR
 
-    #Colocamos EXPRESSION entre parênteses porque é uma expressão, mas não temos certeza
-    FACTOR: int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION)
+    
+    FACTOR: int_constant | float_constant | string_constant | null | LVALUE 
+                | (EXPRESSION)
 
     LVALUE: ident G
     G: [EXPRESSION] | [EXPRESSION]G | &
