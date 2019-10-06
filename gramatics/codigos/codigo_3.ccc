@@ -93,7 +93,7 @@ f = f - 10;
         break;
     }
     else {
-        print "z é maior que r";
+        print "z e maior que r";
     }
  }
  return;
