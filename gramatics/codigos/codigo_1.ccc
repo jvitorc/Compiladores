@@ -29,7 +29,83 @@ if(max%2 == 0) {
   print "é par";
 }
 else {
-  print "não é par"
+  print "não é par";
+}
+
+for(i = 0; i < max; i = i + 1) {
+  a = a + 2;
+  b = b + 2;
+  c = c + 2;
+  d = d + 2;
+  e = e + 2;
+}
+max = max + a;
+max = max + b;
+max = max + c;
+max = max + d;
+max = max + e;
+if(max%2 == 0) {
+  print "é par";
+}
+else {
+  print "não é par";
+}
+
+for(i = 0; i < max; i = i + 1) {
+  a = a + 3;
+  b = b + 3;
+  c = c + 3;
+  d = d + 3;
+  e = e + 3;
+}
+max = max + a;
+max = max + b;
+max = max + c;
+max = max + d;
+max = max + e;
+if(max%2 == 0) {
+  print "é par";
+}
+else {
+  print "não é par";
+}
+
+for(i = 0; i < max; i = i + 1) {
+  a = a + 4;
+  b = b + 4;
+  c = c + 4;
+  d = d + 4;
+  e = e + 4;
+}
+max = max + a;
+max = max + b;
+max = max + c;
+max = max + d;
+max = max + e;
+if(max%2 == 0) {
+  print "é par";
+}
+else {
+  print "não é par";
+}
+
+for(i = 0; i < max; i = i + 1) {
+  a = a + 5;
+  b = b + 5;
+  c = c + 5;
+  d = d + 5;
+  e = e + 5;
+}
+max = max + a;
+max = max + b;
+max = max + c;
+max = max + d;
+max = max + e;
+if(max%2 == 0) {
+  return "é par";
+}
+else {
+  return "não é par";
 }
 
 }
