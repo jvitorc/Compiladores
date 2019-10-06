@@ -1,23 +1,5 @@
 {
 {
-float a;
-float b;
-int i;
-int max;
-a = 0;
-max = 10000;
-for (i = 1; i <= max; i = i + 1){
-print a;
-a = a + 0.001;
-b = a;
-if (b != a){
-print "Erro numerico na atribuicao de numeros na notacao ponto flutuante!";
-break;
-}
-}
-}
-
-{
 int c;
 int d;
 int e;
@@ -36,10 +18,11 @@ for (i = 0; i < 10; i = i + 1) {
 print c[i];
 if (c[i] % 2 ) {
 print "achou";
-c[i] = c[i] + 1;
+c[i] = c[i] + 7;
 }
 else {
 c[i] = e;
+print "nao achou";
 break;
 }
 }
@@ -84,17 +67,35 @@ print "nao acabou i";
 else {
 break;
 }
-f = f - 2;
-g = g - 2;
-h = h - 2;
-i = i - 2;
+f = f - 7;
+g = g - f;
+h = h - g;
+i = i - h;
 if (f < g) {
 break;
 }
 else {
-f = f - 5;
+f = f - 10;
 }
 }
-return;
+}
+{
+ int z;
+ int y;
+ int w;
+ float r;
+ y = 2;
+ w = 3;
+ r = 0.0001;
+ for (z = 1 ; z > r ; z = z + 1) {
+    r = r + 1.0;
+    if(r < z) {
+        break;
+    }
+    else {
+        print "z é maior que r";
+    }
+ }
+ return;
 }
 }
