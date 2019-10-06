@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-    PROGRAM: STATEMENT
-            |
-            ;
+    PROGRAM: STATEMENT | &
     
-    STATEMENT: VARDECL ';'
-            | ATRIBSTAT ';'
-            | PRINTSTAT ';'
-            | READSTAT ';'
-            | RETURNSTAT ';'
+    STATEMENT: VARDECL;
+            | ATRIBSTAT;
+            | PRINTSTAT;
+            | READSTAT;
+            | RETURNSTAT;
             | IFSTAT
             | FORSTAT
-            | '{' STATELIST '}'
-            | 'break' ';'
-            | ';'
-            ;
-=======
-    PROGRAM -> STATEMENT|&
-    STATEMENT -> VARDECL; | ATRIBSTAT; | PRINTSTAT; | READSTAT; | RETURNSTAT;
-                | IFSTAT; | FORSTAT; | {STATELIST} | break; | ;
->>>>>>> 1bec48ab4f4a62f8585d98d20b6007aa4e304cf5
+            | { STATELIST }
+            | break ;
+            | ;
     
     VARDECL: A ident B
     
@@ -54,13 +45,7 @@
 
     UNARYEXPR: MAISOUMENOS FACTOR | FACTOR
 
-<<<<<<< HEAD
     FACTOR: int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION)
-=======
-    
-    FACTOR: int_constant | float_constant | string_constant | null | LVALUE 
-                | (EXPRESSION)
->>>>>>> 1bec48ab4f4a62f8585d98d20b6007aa4e304cf5
 
     LVALUE: ident G
     G: [EXPRESSION] | [EXPRESSION]G | &
