@@ -26,10 +26,10 @@ max = max + c;
 max = max + d;
 max = max + e;
 if(max%2 == 0) {
-  print "é par";
+  print "e par";
 }
 else {
-  print "não é par";
+  print "nao e par";
 }
 
 for(i = 0; i < max; i = i + 1) {
@@ -45,10 +45,10 @@ max = max + c;
 max = max + d;
 max = max + e;
 if(max%2 == 0) {
-  print "é par";
+  print "e par";
 }
 else {
-  print "não é par";
+  print "nao e par";
 }
 
 for(i = 0; i < max; i = i + 1) {
@@ -64,10 +64,10 @@ max = max + c;
 max = max + d;
 max = max + e;
 if(max%2 == 0) {
-  print "é par";
+  print "e par";
 }
 else {
-  print "não é par";
+  print "nao e par";
 }
 
 for(i = 0; i < max; i = i + 1) {
@@ -83,10 +83,10 @@ max = max + c;
 max = max + d;
 max = max + e;
 if(max%2 == 0) {
-  print "é par";
+  print "e par";
 }
 else {
-  print "não é par";
+  print "nao e par";
 }
 
 for(i = 0; i < max; i = i + 1) {
@@ -101,13 +101,7 @@ max = max + b;
 max = max + c;
 max = max + d;
 max = max + e;
-if(max%2 == 0) {
-  return "é par";
-}
-else {
-  return "não é par";
-}
-
+return;
 }
 }
 
