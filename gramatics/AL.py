@@ -5,7 +5,14 @@ from gramaticas.gramaticaAntlrLexer import gramaticaAntlrLexer
 from gramaticas.gramaticaAntlrParser import gramaticaAntlrParser
 
 
-literal_types = {}
+literal_types = {
+    gramaticaAntlrLexer.INT_CONSTANT: 'int_constant',
+    gramaticaAntlrLexer.STRING_CONSTANT: 'string_constant',
+    gramaticaAntlrLexer.IDENT: 'ID',
+    gramaticaAntlrLexer.MDP: 'MDP',
+    gramaticaAntlrLexer.MAISOUMENOS: 'MAISOUMENOS',
+    gramaticaAntlrLexer.FLOAT_CONSTANT: 'float_constant'
+}
 
 def main(argv):
     input_stream = FileStream(argv[1], encoding='utf-8')
@@ -39,7 +46,6 @@ def print_table(header, table, sizes):
 
 def dump_tokens(lexer):
     tokens = lexer.getAllTokens()
-
     table = []
 
     for i, token in enumerate(tokens):
