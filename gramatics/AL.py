@@ -1,8 +1,8 @@
 import importlib
 import sys
 from antlr4 import *
-from gramaticaAntlrLexer import gramaticaAntlrLexer
-from gramaticaAntlrParser import gramaticaAntlrParser
+from gramaticas.gramaticaAntlrLexer import gramaticaAntlrLexer
+from gramaticas.gramaticaAntlrParser import gramaticaAntlrParser
 
 
 literal_types = {}
