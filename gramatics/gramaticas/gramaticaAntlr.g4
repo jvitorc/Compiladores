@@ -161,8 +161,8 @@ fragment CESPECIAL:
 
 
 // TOKENS IDENTIFICADOR DE PALAVRAS DIVERSAS
-IDENT: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-INT_CONSTANT: '0' | ('1'..'9')('0'..'9')*;
-FLOAT_CONSTANT: ( '0' | ('1'..'9')('0'..'9')* )'.'('0'..'9')+;
-STRING_CONSTANT:  '"'('a'..'z'|'A'..'Z'|'_'|'0'..'9'| CESPECIAL)*'"';
-WS : [ \r\t\n]+ -> skip;
+IDENT: [a-zA-Z][a-zA-Z0-9]*;
+INT_CONSTANT: '0' | [1-9][0-9]*;
+FLOAT_CONSTANT: '0.0' | [1-9][0-9]*'.'[0-9]+;
+STRING_CONSTANT:  '"'[a-zA-Z_0-9]*'"';
+WS : [ \t]+ -> skip;
