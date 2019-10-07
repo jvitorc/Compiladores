@@ -5,10 +5,12 @@ from gramaticaAntlrLexer import gramaticaAntlrLexer
 from gramaticaAntlrParser import gramaticaAntlrParser
 
 
+literal_types = {}
+
 def main(argv):
-    input_stream = FileStream(argv[1])
+    input_stream = FileStream(argv[1], encoding='utf-8')
     lexer = gramaticaAntlrLexer(input_stream)
-    dump_tokens(lexer);
+    dump_tokens(lexer)
     # stream = CommonTokenStream(lexer)
     # stream.getNumberOfOnChannelTokens()
     # for x in stream.getTokens(0, 1000):
@@ -42,8 +44,8 @@ def dump_tokens(lexer):
 
     for i, token in enumerate(tokens):
         type_ = (
-            XppLexer.literalNames[token.type]
-            if token.type < len(XppLexer.literalNames)
+            gramaticaAntlrLexer.literalNames[token.type]
+            if token.type < len(gramaticaAntlrLexer.literalNames)
             else literal_types.get(token.type)
         )
 
