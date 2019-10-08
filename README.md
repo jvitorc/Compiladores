@@ -1,9 +1,9 @@
-#### Disciplina:
-----------------
+Disciplina:
+-----------
 **INE5426** - Construção de Compiladores
 
-#### Grupo:
------------
+Grupo:
+------
 João Pedro Santana
 
 Stefano Bergamini Poletto
