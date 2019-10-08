@@ -4,6 +4,7 @@ compilar:
 	pip3 install setuptools
 	pip3 install wheel
 	pip3 install antlr4-python3-runtime
+	antlr4 -Dlanguage=Python3 ./gramatics/gramaticas/gramaticaAntlr.g4
 
 RUN_AL_1:
 	python3 ./gramatics/AL.py ./gramatics/codigos/codigo_1.ccc
