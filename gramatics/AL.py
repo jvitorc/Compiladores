@@ -18,13 +18,6 @@ def main(argv):
     input_stream = FileStream(argv[1], encoding='utf-8')
     lexer = gramaticaAntlrLexer(input_stream)
     dump_tokens(lexer)
-    # stream = CommonTokenStream(lexer)
-    # stream.getNumberOfOnChannelTokens()
-    # for x in stream.getTokens(0, 1000):
-    #     print(x.text)
-    # parser = gramaticaAntlrParser(stream)
-    # tree = parser.program()
-    # print(tree.getText())
 
 def print_table(header, table, sizes):
     row_format = ''
