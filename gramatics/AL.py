@@ -11,7 +11,8 @@ literal_types = {
     gramaticaAntlrLexer.IDENT: 'ID',
     gramaticaAntlrLexer.MDP: 'MDP',
     gramaticaAntlrLexer.MAISOUMENOS: 'MAISOUMENOS',
-    gramaticaAntlrLexer.FLOAT_CONSTANT: 'float_constant'
+    gramaticaAntlrLexer.FLOAT_CONSTANT: 'float_constant',
+    gramaticaAntlrLexer.COMPARADORES: 'Comparadores'
 }
 
 def main(argv):

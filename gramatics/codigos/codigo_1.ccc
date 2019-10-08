@@ -5,6 +5,8 @@ int b;
 int c;
 int d;
 int e;
+int gg
+gg = null
 int max;
 a = 1;
 b = 2;

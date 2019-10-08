@@ -60,29 +60,29 @@ def serializedATN():
         buf.write("\u0088\7\21\2\2\u0088\u0089\5\4\3\2\u0089\27\3\2\2\2\u008a")
         buf.write("\u008f\5\4\3\2\u008b\u008c\5\4\3\2\u008c\u008d\5\30\r")
         buf.write("\2\u008d\u008f\3\2\2\2\u008e\u008a\3\2\2\2\u008e\u008b")
-        buf.write("\3\2\2\2\u008f\31\3\2\2\2\u0090\u0091\7\25\2\2\u0091\u0092")
+        buf.write("\3\2\2\2\u008f\31\3\2\2\2\u0090\u0091\7\26\2\2\u0091\u0092")
         buf.write("\5\b\5\2\u0092\u0093\5\34\17\2\u0093\33\3\2\2\2\u0094")
         buf.write("\u0095\7\f\2\2\u0095\u0096\5\36\20\2\u0096\u0097\7\r\2")
         buf.write("\2\u0097\u009e\3\2\2\2\u0098\u0099\7\f\2\2\u0099\u009a")
         buf.write("\5\36\20\2\u009a\u009b\7\r\2\2\u009b\u009c\5\34\17\2\u009c")
         buf.write("\u009e\3\2\2\2\u009d\u0094\3\2\2\2\u009d\u0098\3\2\2\2")
         buf.write("\u009e\35\3\2\2\2\u009f\u00a5\5 \21\2\u00a0\u00a1\5 \21")
-        buf.write("\2\u00a1\u00a2\7\26\2\2\u00a2\u00a3\5 \21\2\u00a3\u00a5")
+        buf.write("\2\u00a1\u00a2\7\27\2\2\u00a2\u00a3\5 \21\2\u00a3\u00a5")
         buf.write("\3\2\2\2\u00a4\u009f\3\2\2\2\u00a4\u00a0\3\2\2\2\u00a5")
         buf.write("\37\3\2\2\2\u00a6\u00a7\5$\23\2\u00a7\u00a8\5\"\22\2\u00a8")
-        buf.write("!\3\2\2\2\u00a9\u00aa\7\27\2\2\u00aa\u00b1\5$\23\2\u00ab")
-        buf.write("\u00ac\7\27\2\2\u00ac\u00ad\5$\23\2\u00ad\u00ae\5\"\22")
+        buf.write("!\3\2\2\2\u00a9\u00aa\7\30\2\2\u00aa\u00b1\5$\23\2\u00ab")
+        buf.write("\u00ac\7\30\2\2\u00ac\u00ad\5$\23\2\u00ad\u00ae\5\"\22")
         buf.write("\2\u00ae\u00b1\3\2\2\2\u00af\u00b1\3\2\2\2\u00b0\u00a9")
         buf.write("\3\2\2\2\u00b0\u00ab\3\2\2\2\u00b0\u00af\3\2\2\2\u00b1")
         buf.write("#\3\2\2\2\u00b2\u00b3\5(\25\2\u00b3\u00b4\5&\24\2\u00b4")
-        buf.write("%\3\2\2\2\u00b5\u00b6\7\30\2\2\u00b6\u00bd\5(\25\2\u00b7")
-        buf.write("\u00b8\7\30\2\2\u00b8\u00b9\5(\25\2\u00b9\u00ba\5&\24")
+        buf.write("%\3\2\2\2\u00b5\u00b6\7\31\2\2\u00b6\u00bd\5(\25\2\u00b7")
+        buf.write("\u00b8\7\31\2\2\u00b8\u00b9\5(\25\2\u00b9\u00ba\5&\24")
         buf.write("\2\u00ba\u00bd\3\2\2\2\u00bb\u00bd\3\2\2\2\u00bc\u00b5")
         buf.write("\3\2\2\2\u00bc\u00b7\3\2\2\2\u00bc\u00bb\3\2\2\2\u00bd")
-        buf.write("\'\3\2\2\2\u00be\u00bf\7\27\2\2\u00bf\u00c2\5*\26\2\u00c0")
+        buf.write("\'\3\2\2\2\u00be\u00bf\7\30\2\2\u00bf\u00c2\5*\26\2\u00c0")
         buf.write("\u00c2\5*\26\2\u00c1\u00be\3\2\2\2\u00c1\u00c0\3\2\2\2")
         buf.write("\u00c2)\3\2\2\2\u00c3\u00cd\7\33\2\2\u00c4\u00cd\7\34")
-        buf.write("\2\2\u00c5\u00cd\7\35\2\2\u00c6\u00cd\7\31\2\2\u00c7\u00cd")
+        buf.write("\2\2\u00c5\u00cd\7\35\2\2\u00c6\u00cd\7\25\2\2\u00c7\u00cd")
         buf.write("\5,\27\2\u00c8\u00c9\7\20\2\2\u00c9\u00ca\5\36\20\2\u00ca")
         buf.write("\u00cb\7\21\2\2\u00cb\u00cd\3\2\2\2\u00cc\u00c3\3\2\2")
         buf.write("\2\u00cc\u00c4\3\2\2\2\u00cc\u00c5\3\2\2\2\u00cc\u00c6")
@@ -111,14 +111,13 @@ class gramaticaAntlrParser ( Parser ):
     literalNames = [ "<INVALID>", "'int'", "'string'", "'float'", "'break'", 
                      "';'", "'='", "'print'", "'{'", "'}'", "'['", "']'", 
                      "'read'", "'return'", "'('", "')'", "'if'", "'else'", 
-                     "'for'", "'new'", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'null'" ]
+                     "'for'", "'null'", "'new'" ]
 
     symbolicNames = [ "<INVALID>", "INT", "STRING", "FLOAT", "BREAK", "ENDLINE", 
                       "EQUAL", "PRINT", "CHAVEA", "CHAVEF", "COLCHA", "COLCHF", 
                       "READ", "RETURN", "PARENTEA", "PARENTEF", "IF", "ELSE", 
-                      "FOR", "NEW", "COMPARADORES", "MAISOUMENOS", "MDP", 
-                      "NULL", "IDENT", "INT_CONSTANT", "FLOAT_CONSTANT", 
+                      "FOR", "NULL", "NEW", "COMPARADORES", "MAISOUMENOS", 
+                      "MDP", "IDENT", "INT_CONSTANT", "FLOAT_CONSTANT", 
                       "STRING_CONSTANT", "WS" ]
 
     RULE_program = 0
@@ -169,11 +168,11 @@ class gramaticaAntlrParser ( Parser ):
     IF=16
     ELSE=17
     FOR=18
-    NEW=19
-    COMPARADORES=20
-    MAISOUMENOS=21
-    MDP=22
-    NULL=23
+    NULL=19
+    NEW=20
+    COMPARADORES=21
+    MAISOUMENOS=22
+    MDP=23
     IDENT=24
     INT_CONSTANT=25
     FLOAT_CONSTANT=26

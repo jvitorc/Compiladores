@@ -108,11 +108,11 @@ PARENTEF: ')';
 IF: 'if';
 ELSE: 'else';
 FOR: 'for';
+NULL: 'null';
 NEW: 'new';
 COMPARADORES: '<' | '>' | '<=' | '>=' | '==' | '!=';
 MAISOUMENOS: '+' | '-';
 MDP: '*' | '/' | '%';
-NULL: 'null';
 
 // Caracteres especiais
 fragment CESPECIAL:
