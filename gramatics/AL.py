@@ -61,7 +61,6 @@ def dump_tokens(lexer):
         table,
         [5, max(len(t.text) for t in tokens), 12, 13],
     )
-    print(literal_types)
 
 
 if __name__ == '__main__':
