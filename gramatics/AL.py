@@ -44,9 +44,7 @@ def dump_tokens(lexer):
 
     for i, token in enumerate(tokens):
         type_ = (
-            gramaticaAntlrLexer.literalNames[token.type]
-            if token.type < len(gramaticaAntlrLexer.literalNames)
-            else literal_types.get(token.type)
+            gramaticaAntlrLexer.symbolicNames[token.type]
         )
 
         table.append([

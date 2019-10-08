@@ -1,15 +1,13 @@
 {
 {
-int a;
+int;
 int b;
 int c;
 int d;
 int e;
-int gg
-gg = null
 int max;
 a = 1;
-b = 2;
+b =;
 c = 3;
 d = 4;
 e = 5;
