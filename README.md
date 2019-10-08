@@ -1,7 +1,9 @@
 #### Disciplina:
+----------------
 **INE5426** - Construção de Compiladores
 
 #### Grupo:
+-----------
 João Pedro Santana
 
 Stefano Bergamini Poletto
@@ -52,17 +54,16 @@ bash
 $ pip3 install antlr4-python3-runtime
 
 
-3. Executar o compilador (deve ser executado na pasta gramaticas):
+3. Executar o compilador (deve ser executado na pasta raiz):
 
 bash
-$ antlr4 -Dlanguage=Python3 gramaticaAntlr.g4
-
-Volta a pasta gramatics e executa o AL:
+$ antlr4 -Dlanguage=Python3 ./gramatics/gramaticas/gramaticaAntlr.g4
 
 bash
-$ python3 AL.py ./gramatics/codigos/codigo_1.ccc
+$ python3 ./gramatics/AL.py ./gramatics/codigos/codigo_1.ccc
 
-Modo manual para realizar os testes com os arquivos de teste (códigos).
+Modo "manual" para realizar os testes com os arquivos de teste (códigos).
 Novamente para testar outro código basta mudar o numero "1" para 2 ou 3.
 Para executar o AS basta mudar o "AL.py" para AS.py.
+
 ...
