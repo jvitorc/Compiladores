@@ -21,13 +21,16 @@ Instalação e execução
 ---------------------
 
 bash
+$ make 
 $ make RUN_AL_1
 
-Esse make é o utilizado para os Analisadores Léxicos já realizando o teste
-no programa codigo_1.ccc, para realizar o teste no 2 ou 3 basta trocar o 
+O primeiro make é para realizar a instalação dos programas necessários, o 
+segundo make é o utilizado para realizar o teste no programa codigo_1.ccc 
+do AL, para realizar o teste no 2 ou 3 basta trocar o 
 número para código desejado.
 
 bash
+$ make
 $ make RUN_AS_1
 
 Esse make segue a mesma lógica do AL porém é para o Analisador Sintático.
