@@ -113,8 +113,54 @@ COMPARADORES: '<' | '>' | '<=' | '>=' | '==' | '!=';
 MAISOUMENOS: '+' | '-';
 MDP: '*' | '/' | '%';
 NULL: 'null';
-IDENT: [a-zA-Z][a-zA-Z0-9_]*;
-INT_CONSTANT: [0-9]+;
-FLOAT_CONSTANT: '0.0' | [1-9][0-9]*'.'[0-9]+;
-STRING_CONSTANT: '"'[a-zA-Z_0-9]*'"';
-WS : [ \t\r\n]+ -> skip;
+
+// Caracteres especiais
+fragment CESPECIAL:
+(
+':'
+| ';'
+| '.'
+| ','
+| '+'
+| '-'
+| '*'
+| '/'
+| '%'
+| '?'
+| '!'
+| '|'
+| ' '
+| '_'
+| '['
+| ']'
+| '('
+| ')'
+| '{'
+| '}'
+| '<'
+| '>'
+| '@'
+| '#'
+| '$'
+| '^'
+| '&'
+| '~'
+| [\u0060]
+| [\u005C]
+| [\u00C0-\u00C5]
+| [\u00C7-\u00CF]
+| [\u00D1-\u00D6]
+| [\u00D9-\u00DC]
+| [\u00E0-\u00E4]
+| [\u00E7-\u00EF]
+| [\u00F2-\u00F6]
+| [\u00F9-\u00FC]
+);
+
+
+// TOKENS IDENTIFICADOR DE PALAVRAS DIVERSAS
+IDENT: ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+INT_CONSTANT: '0' | ('1'..'9')('0'..'9')*;
+FLOAT_CONSTANT: ( '0' | ('1'..'9')('0'..'9')* )'.'('0'..'9')+;
+STRING_CONSTANT:  '"'('a'..'z'|'A'..'Z'|'_'|'0'..'9'| CESPECIAL)*'"';
+WS : [ \r\t\n]+ -> skip;

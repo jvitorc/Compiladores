@@ -1,4 +1,4 @@
-# Generated from gramaticaAntlr.g4 by ANTLR 4.7.2
+# Generated from ./gramaticas/gramaticaAntlr.g4 by ANTLR 4.7.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .gramaticaAntlrParser import gramaticaAntlrParser
