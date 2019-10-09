@@ -1,6 +1,6 @@
 compilar:
 	sudo apt-get update
-	sudo apt install antlr4.5.1
+	sudo apt install antlr4.5
 	sudo apt install python3.5 python3-pip
 	pip3 install setuptools
 	pip3 install wheel
