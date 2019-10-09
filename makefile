@@ -1,4 +1,5 @@
 compilar:
+	sudo apt-get update
 	sudo apt install antlr4
 	sudo apt install python 3.6.8 python3-pip
 	pip3 install setuptools
