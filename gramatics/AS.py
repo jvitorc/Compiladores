@@ -38,7 +38,7 @@ class MyErrorStrategy(DefaultErrorStrategy):
         )
 
         MyErrorStrategy.Erro = True
-        msg = "\nRegraProdução: %s\nToken: %s (%s)" %(str(recognizer._ctx.toStringTree([],recognizer)), str(token.text), str(type_))
+        msg = "\nRegra: %s\nSymbolo(Token): %s (%s)" %(str(recognizer._ctx.toStringTree([],recognizer)), str(token.text), str(type_))
 
         print("Erro Sintatico")       
         recognizer.notifyErrorListeners(msg, e.offendingToken, e)
