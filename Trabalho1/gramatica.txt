@@ -1,0 +1,58 @@
+GRAMATICA BNF
+
+    PROGRAM -> (STATEMENT)?
+    STATEMENT -> VARDECL; | ATRIBSTAT; | PRINTSTAT; | READSTAT; | RETURNSTAT; | IFSTAT; | FORSTAT; | {STATELIST} | break; | ;
+    VARDECL -> (int | float | string) ident ([int_constant])*
+    ATRIBSTAT -> LVALUE = (EXPRESSION | ALLOCEXPRESSION)
+    PRINTSTAT -> print EXPRESSION
+    READSTAT -> read LVALUE
+    RETURNSTAT -> return
+    IFSTAT -> if(EXPRESSION) STATEMENT (else STATEMENT)?
+    FORSTAT -> for(ATRIBSTAT; NUMEXPRESSION; ATRIBSTAT) STATEMENT
+    STATELIST -> STATEMENT (STATELIST)?
+    ALLOCEXPRESSION -> new (int | float | string) ([EXPRESSION])+
+    EXPRESSION -> NUMEXPRESSION((< | > | <= | >= | == | !=)) NUMEXPRESSION)?
+    TERM -> UNARYEXPR(( * | \ | %) UNARYEXPR)*
+    UNARYEXPR -> (int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION))
+    LVALUE -> ident([EXPRESSION])*
+
+GRAMATICA NORMAL
+
+    PROGRAM -> STATEMENT|&
+    STATEMENT -> VARDECL; | ATRIBSTAT; | PRINTSTAT; | READSTAT; | RETURNSTAT; | IFSTAT; | FORSTAT; | {STATELIST} | break; | ;
+
+    VARDECL -> A ident B
+    A -> int | float | string
+    B -> [int_constant] | [int_constant]B | &
+
+    ATRIBSTAT -> LVALUE = EXPRESSION | LVALUE = ALLOCEXPRESSION
+
+    PRINTSTAT -> print EXPRESSION
+    READSTAT -> read LVALUE
+    RETURNSTAT -> return
+
+    IFSTAT -> if(EXPRESSION) STATEMENT | if(EXPRESSION) STATEMENT else STATEMENT
+
+    FORSTAT -> for(ATRIBSTAT; NUMEXPRESSION; ATRIBSTAT) STATEMENT
+
+    STATELIST -> STATEMENT | STATEMENT STATELIST
+
+    ALLOCEXPRESSION -> new A C
+    C -> [EXPRESSION] | [EXPRESSION]C
+
+    EXPRESSION -> NUMEXPRESSION | NUMEXPRESSION D NUMEXPRESSION
+    D -> < | > | <= | >= | == | !=
+
+    TERM -> UNARYEXPR E
+    E -> F UNARYEXPR | F UNARYEXPR E | &
+    F -> * | \ | %
+
+    #Colocamos EXPRESSION entre parênteses porque é uma expressão, mas não temos certeza
+    UNARYEXPR -> int_constant | float_constant | string_constant | null | LVALUE | (EXPRESSION)
+
+    LVALUE -> ident G
+    G -> [EXPRESSION] | [EXPRESSION]G | &
+
+DEFINIR TOKENS
+
+    
