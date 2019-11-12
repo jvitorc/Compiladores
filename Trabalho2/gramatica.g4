@@ -1,27 +1,130 @@
 grammar gramatica;
 
-program: (statement | funclist)?;
-funclist: funcdef funclist | funcdef;
+program: statement 
+    | funclist 
+    |
+    ;
+
+funclist: funcdef funclist 
+        | funcdef
+        ;
+
 funcdef: DEF IDENT PARENTEA paramlist PARENTEF CHAVEA statelist CHAVEF;
-paramlist: ((INT | FLOAT | STRING) IDENT VIRGULA paramlist | (INT | FLOAT | STRING) IDENT)?;
-statement: (vardecl PONTOEVIRGULA | atribstat PONTOEVIRGULA | printstat PONTOEVIRGULA | readstat PONTOEVIRGULA | returnstat PONTOEVIRGULA | ifstat | forstat | CHAVEA statelist CHAVEF | BREAK PONTOEVIRGULA | PONTOEVIRGULA);
-vardecl: (INT | FLOAT | STRING) IDENT (COLCHA INT_CONSTANT COLCHF)*;
-atribstat: lvalue ATRIBUICAO ( expression | allocexpression | funccall);
+
+
+a: INT 
+    | FLOAT 
+    | STRING
+    ;
+
+paramlist: a IDENT VIRGULA paramlist 
+        | a IDENT
+        ;
+
+statement: vardecl PONTOEVIRGULA 
+    | atribstat PONTOEVIRGULA
+    | printstat PONTOEVIRGULA
+    | readstat PONTOEVIRGULA
+    | returnstat PONTOEVIRGULA
+    | ifstat
+    | forstat
+    | CHAVEA statelist CHAVEF
+    | BREAK PONTOEVIRGULA
+    | PONTOEVIRGULA
+    ;
+
+b: COLCHA INT_CONSTANT COLCHF b
+    |
+    ;
+
+vardecl: a IDENT b;
+
+c: expression
+    | allocexpression
+    | funccall
+    ;
+
+atribstat: lvalue ATRIBUICAO c;
+
+
 funccall: IDENT PARENTEA paramlistcall PARENTEF;
-paramlistcall: (IDENT VIRGULA paramlistcall | IDENT)?;
+
+paramlistcall: IDENT VIRGULA paramlistcall 
+    | IDENT
+    |
+    ;
+
 printstat: PRINT expression;
+
 readstat: READ lvalue;
+
 returnstat: RETURN;
+
 ifstat: IF PARENTEA expression PARENTEF statement;
+
 forstat: FOR PARENTEA atribstat PONTOEVIRGULA expression PONTOEVIRGULA atribstat PARENTEF statement;
-statelist: statement (statelist)?;
-allocexpression: NEW (INT | FLOAT | STRING) (CHAVEA numexpression CHAVEF)+;
-expression: numexpression(( MENORQUE | MAIORQUE | MENOREIGUAL | MAIOREIGUAL | IGUAL | DIFERENTE ) numexpression)?;
-numexpression: term (( MAIS | MENOS) term)*;
-term: unaryexpr(( MULTIPLICACAO | DIVISAO | MODULO ) unaryexpr)*;
-unaryexpr: (( MAIS | MENOS ))? factor;
-factor: (INT_CONSTANT | FLOAT_CONSTANT | STRING_CONSTANT | NULL | lvalue | PARENTEA numexpression PARENTEF);
-lvalue: IDENT ( COLCHA numexpression COLCHF )*;
+
+statelist: statement statelist
+    | statement
+    ;
+
+d: CHAVEA numexpression CHAVEF
+    | CHAVEA numexpression CHAVEF d
+    ;
+
+allocexpression: NEW a d;
+
+comparadores: MENORQUE 
+    | MAIORQUE
+    | MENOREIGUAL 
+    | MAIOREIGUAL 
+    | IGUAL
+    | DIFERENTE
+    ;
+
+expression: numexpression comparadores numexpression
+    | numexpression
+    ;
+
+maisoumenos: MAIS 
+    | MENOS
+    ;
+
+e: maisoumenos term e
+    |
+    ;
+
+numexpression: term e;
+
+mdm: MULTIPLICACAO 
+    | DIVISAO 
+    | MODULO
+    ;
+
+f: mdm unaryexpr f
+    |
+    ;
+
+term: unaryexpr f;
+
+unaryexpr: maisoumenos factor
+    | factor
+    ;
+
+
+factor: INT_CONSTANT
+    | FLOAT_CONSTANT
+    | STRING_CONSTANT
+    | NULL
+    | lvalue
+    | PARENTEA numexpression PARENTEF
+    ;
+
+g: COLCHA numexpression COLCHF g
+    |
+    ;
+
+lvalue: IDENT g;
 
 DEF: 'def';
 INT: 'int';
