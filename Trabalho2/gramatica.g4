@@ -86,45 +86,45 @@ expression: numexpression comparadores numexpression
     | numexpression
     ;
 
-maisoumenos: MAIS 
-    | MENOS
+maisoumenos returns [value]: MAIS {$value = $MAIS.text} 
+    | MENOS {$value = $MENOS.text}
     ;
 
-e: maisoumenos term e
-    |
+e[inhr] returns [syn]: maisoumenos term e[Node($maisoumenos.value, $inhr, $term.node)] {$syn = $e.syn}
+    | {$syn = $inhr}
     ;
 
-numexpression: term e;
+numexpression returns [$node]: term e[$term.node] {$node = $term.node} {print($e.syn.pre_order())};
 
-mdm: MULTIPLICACAO 
-    | DIVISAO 
-    | MODULO
+mdm returns [value]: MULTIPLICACAO {$value = $MULTIPLICACAO.text}
+    | DIVISAO {$value = $DIVISAO.text}
+    | MODULO {$value = $MODULO.text}
+     ;
+
+f[inhr] returns [syn]: mdm unaryexpr f[Node($mdm.value, $inhr, $unaryexpr.node)] {$syn = $f.syn}
+    | {$syn = $inhr}
     ;
 
-f: mdm unaryexpr f
-    |
-    ;
+term returns [node]: unaryexpr f[$unaryexpr.node] {$node = $f.syn};
 
-term: unaryexpr f;
-
-unaryexpr: maisoumenos factor
-    | factor
+unaryexpr returns [node]: maisoumenos factor {$node = Node($maisoumenos.value, right=$factor.node)}
+    | factor {$node = $factor.node}
     ;
 
 
-factor: INT_CONSTANT
-    | FLOAT_CONSTANT
-    | STRING_CONSTANT
-    | NULL
-    | lvalue
-    | PARENTEA numexpression PARENTEF
+factor returns [node]: INT_CONSTANT {$node = Leaf('INT_CONSTANT', $INT_CONSTANT.text) }
+    | FLOAT_CONSTANT {$node = Leaf('FLOAT_CONSTANT', $FLOAT_CONSTANT.text)}
+    | STRING_CONSTANT {$node = Leaf('STRING_CONSTANT', $STRING_CONSTANT.text)}
+    | NULL {$node = Leaf('NULL.type', $NULL.text)}
+    | lvalue {$node = $lvalue.node}
+    | PARENTEA numexpression {$node = $numexpression.node} PARENTEF
     ;
 
 g: COLCHA numexpression COLCHF g
     |
     ;
 
-lvalue: IDENT g;
+lvalue returns [node]: IDENT {$node = Leaf('IDENT', $IDENT.text)} g;
 
 DEF: 'def';
 INT: 'int';
