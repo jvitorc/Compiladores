@@ -1,3 +1,9 @@
+expression_table = []
+
+def insert_expression_table(data):
+    expression_table.append(data)
+
+
 class Node:
 
     def __init__(self, data, left=None, right=None):
@@ -28,5 +34,7 @@ class Leaf:
 
 if __name__ == "__main__":
 
-    tree = Node("1", Node("2", Left("3", "T"), Left("4", "T")), Left("A","T"))
-    assert tree.pre_order() == ['1', '2', '3', '4', 'A']
+    tree = Node("1", Node("2", Leaf("T", "3"), Leaf("T", "4")), Leaf("T","5"))
+    tree2 = Node("J", Node("2", Leaf("T", "3"), Leaf("T", "4")), Leaf("T","5"))
+    assert tree.pre_order([]) == ['1', '2', '3', '4', '5']
+    assert tree2.pre_order([]) == ['J', '2', '3', '4', '5']

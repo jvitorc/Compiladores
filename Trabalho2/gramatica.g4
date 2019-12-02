@@ -12,9 +12,9 @@ funclist: funcdef funclist
 funcdef: DEF IDENT PARENTEA paramlist PARENTEF CHAVEA statelist CHAVEF;
 
 
-a: INT 
-    | FLOAT 
-    | STRING
+a returns [value]: INT {$value = 'int'} 
+    | FLOAT {$value = 'float'}
+    | STRING {$value = 'string'}
     ;
 
 paramlist: a IDENT VIRGULA paramlist 
@@ -33,11 +33,11 @@ statement: vardecl PONTOEVIRGULA
     | PONTOEVIRGULA
     ;
 
-b: COLCHA INT_CONSTANT COLCHF b
-    |
+b[inhr] returns [syn]: COLCHA INT_CONSTANT COLCHF b["vector(%s, %s)" %($inhr, $INT_CONSTANT.text)] {$syn = $b.syn}
+    | {$syn = $inhr}
     ;
 
-vardecl: a IDENT b;
+vardecl: a IDENT b[$a.value] {insert_symbol_table($IDENT.text, $b.syn)};
 
 c: expression
     | allocexpression
@@ -94,7 +94,7 @@ e[inhr] returns [syn]: maisoumenos term e[Node($maisoumenos.value, $inhr, $term.
     | {$syn = $inhr}
     ;
 
-numexpression returns [$node]: term e[$term.node] {$node = $term.node} {print($e.syn.pre_order())};
+numexpression returns [$node]: term e[$term.node] {$node = $term.node} {insert_expression_table($e.syn.pre_order([]))};
 
 mdm returns [value]: MULTIPLICACAO {$value = $MULTIPLICACAO.text}
     | DIVISAO {$value = $DIVISAO.text}
