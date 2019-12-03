@@ -29,7 +29,7 @@ statement: vardecl PONTOEVIRGULA
     | ifstat
     | forstat
     | CHAVEA statelist CHAVEF
-    | BREAK PONTOEVIRGULA
+    | BREAK {testar_break($BREAK)} PONTOEVIRGULA
     | PONTOEVIRGULA
     ;
 
@@ -37,7 +37,7 @@ b[inhr] returns [syn]: COLCHA INT_CONSTANT COLCHF b["vector(%s, %s)" %($inhr, $I
     | {$syn = $inhr}
     ;
 
-vardecl: a IDENT b[$a.value] {insert_symbol_table($IDENT.text, $b.syn)};
+vardecl: a IDENT b[$a.value] {insert_symbol_table($IDENT, $b.syn)};
 
 c: expression
     | allocexpression
@@ -62,7 +62,7 @@ returnstat: RETURN;
 
 ifstat: IF PARENTEA expression PARENTEF statement;
 
-forstat: FOR PARENTEA atribstat PONTOEVIRGULA expression PONTOEVIRGULA atribstat PARENTEF statement;
+forstat: FOR PARENTEA atribstat PONTOEVIRGULA expression PONTOEVIRGULA atribstat PARENTEF {entrar_laco()} statement {sair_laco()};
 
 statelist: statement statelist
     | statement
@@ -94,7 +94,7 @@ e[inhr] returns [syn]: maisoumenos term e[Node($maisoumenos.value, $inhr, $term.
     | {$syn = $inhr}
     ;
 
-numexpression returns [$node]: term e[$term.node] {$node = $term.node} {insert_expression_table($e.syn.pre_order([]))};
+numexpression returns [$node]: term e[$term.node] {$node = $term.node} {insert_expression_table($e.syn)};
 
 mdm returns [value]: MULTIPLICACAO {$value = $MULTIPLICACAO.text}
     | DIVISAO {$value = $DIVISAO.text}
@@ -112,10 +112,10 @@ unaryexpr returns [node]: maisoumenos factor {$node = Node($maisoumenos.value, r
     ;
 
 
-factor returns [node]: INT_CONSTANT {$node = Leaf('INT_CONSTANT', $INT_CONSTANT.text) }
-    | FLOAT_CONSTANT {$node = Leaf('FLOAT_CONSTANT', $FLOAT_CONSTANT.text)}
-    | STRING_CONSTANT {$node = Leaf('STRING_CONSTANT', $STRING_CONSTANT.text)}
-    | NULL {$node = Leaf('NULL.type', $NULL.text)}
+factor returns [node]: INT_CONSTANT {$node = Leaf($INT_CONSTANT, 'int') }
+    | FLOAT_CONSTANT {$node = Leaf($FLOAT_CONSTANT, 'float')}
+    | STRING_CONSTANT {$node = Leaf($STRING_CONSTANT, 'str')}
+    | NULL {$node = Leaf($NULL, 'null')}
     | lvalue {$node = $lvalue.node}
     | PARENTEA numexpression {$node = $numexpression.node} PARENTEF
     ;
@@ -124,7 +124,7 @@ g: COLCHA numexpression COLCHF g
     |
     ;
 
-lvalue returns [node]: IDENT {$node = Leaf('IDENT', $IDENT.text)} g;
+lvalue returns [node]: IDENT {$node = Leaf($IDENT, 'ident')} g;
 
 DEF: 'def';
 INT: 'int';
