@@ -1,11 +1,9 @@
-# Generated from gramatica.g4 by ANTLR 4.7.2
+# Generated from Asem/gramatica.g4 by ANTLR 4.7.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
 from typing.io import TextIO
 import sys
-from arvore import *
-from tabela import *
 
 def serializedATN():
     with StringIO() as buf:
@@ -1898,7 +1896,7 @@ class gramaticaParser ( Parser ):
             localctx._term = self.term()
             self.state = 245
             localctx._e = self.e(localctx._term.node)
-            localctx.node = localctx._term.node
+            localctx.node = localctx._e.syn
             insert_expression_table(localctx._e.syn)
         except RecognitionException as re:
             localctx.exception = re
@@ -2395,3 +2393,5 @@ class gramaticaParser ( Parser ):
 
 
 
+from arvore import *
+from tabela import *
