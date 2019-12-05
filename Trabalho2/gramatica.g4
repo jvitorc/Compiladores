@@ -60,7 +60,9 @@ readstat: READ lvalue;
 
 returnstat: RETURN;
 
-ifstat: IF PARENTEA expression PARENTEF statement;
+ifstat: IF PARENTEA expression PARENTEF statement
+    | IF PARENTEA expression PARENTEF statement ELSE statement
+    ;
 
 forstat: FOR PARENTEA atribstat PONTOEVIRGULA expression PONTOEVIRGULA atribstat PARENTEF {entrar_laco()} statement {sair_laco()};
 
@@ -68,8 +70,8 @@ statelist: statement statelist
     | statement
     ;
 
-d: CHAVEA numexpression CHAVEF
-    | CHAVEA numexpression CHAVEF d
+d: COLCHA numexpression COLCHF
+    | CHAVEF numexpression COLCHF d
     ;
 
 allocexpression: NEW a d;
