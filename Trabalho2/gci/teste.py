@@ -7,19 +7,21 @@ from gramaticaParser import gramaticaParser
 from arvore import *
 from tabela import *
 
+
 def main(argv):
-    input_stream = FileStream(argv[1], encoding='utf-8')
+    input_stream = FileStream('in.txt', encoding='utf-8')
     lexer = gramaticaLexer(input_stream)
     stream = CommonTokenStream(lexer)
     stream.getNumberOfOnChannelTokens()
     parser = gramaticaParser(stream)
+    
+    print("\tGeracao de codigo Intermediario\n")
     tree = parser.program()
-    print("\n\tAnalise Semantica\n")
-    expression()
-    symbol()
-    breaks()
+    # print(Trees.toStringTree(tree, None, parser))
+
 
 def expression():
+
     print("\n\tExpressoes em pre-order:")
     for x in range(len(expression_table)):
         print("exp", x, ':', expression_table[x][0], expression_table[x][1])
