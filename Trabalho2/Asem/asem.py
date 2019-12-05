@@ -7,12 +7,13 @@ from arvore import *
 from tabela import *
 
 def main(argv):
-    input_stream = FileStream('in.txt', encoding='utf-8')
+    input_stream = FileStream(argv[1], encoding='utf-8')
     lexer = gramaticaLexer(input_stream)
     stream = CommonTokenStream(lexer)
     stream.getNumberOfOnChannelTokens()
     parser = gramaticaParser(stream)
     tree = parser.program()
+    print("\n\tAnalise Semantica\n")
     expression()
     symbol()
     breaks()
