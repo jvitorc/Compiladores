@@ -1,15 +1,15 @@
 grammar gramatica;
 
 program returns[code, next]: {$next = Label()} statement[$next] {$code = $statement.code + getLabel($next)} {print(getCode($code))}
-    | funclist[$next] {$code = $funclist.code} {print(getCode($code))}
+    | {$next = Label()} funclist[$next] {$code = $funclist.code} {print(getCode($code))}
     | {$code = " "} {print(getCode($code))}
     ;
 
 funclist[next] returns [code, begin]: {$begin = Label()} funcdef[$begin] funclist[$next] {$code = $funcdef.code + getLabel($begin) + $funclist.code}
-        | funcdef[$begin] {$code = $funcdef.code}
+        | {$begin = Label()} funcdef[$next] {$code = $funcdef.code}
         ;
 
-funcdef[next] returns[begin, code]: {$begin = Label()} DEF IDENT PARENTEA paramlist PARENTEF CHAVEA statelist[$next] CHAVEF;
+funcdef[next] returns[code]: DEF IDENT PARENTEA paramlist PARENTEF CHAVEA statelist[$next] CHAVEF {$code = LabelFunc($IDENT.text) + $statelist.code};
 
 a returns [value]: INT {$value = $INT.text} 
     | FLOAT {$value = FLOAT.text}

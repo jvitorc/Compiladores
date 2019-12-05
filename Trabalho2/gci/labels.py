@@ -2,6 +2,9 @@ temporario = 0
 function_labels = {}
 label_index = 0
 
+def LabelFunc(f):
+    return f + "Label:\n"
+
 def Label():
     global label_index
     label_index = label_index + 1
@@ -39,3 +42,4 @@ def getCode(code:str):
             new_code += '\t' + line + '\n'
 
     return new_code
+

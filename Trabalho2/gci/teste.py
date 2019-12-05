@@ -14,11 +14,14 @@ def main(argv):
     stream = CommonTokenStream(lexer)
     stream.getNumberOfOnChannelTokens()
     parser = gramaticaParser(stream)
+    
+    print("\tGeracao de codigo Intermediario\n")
     tree = parser.program()
     # print(Trees.toStringTree(tree, None, parser))
 
 
 def expression():
+
     print("\n\tExpressoes em pre-order:")
     for x in range(len(expression_table)):
         print("exp", x, ':', expression_table[x][0], expression_table[x][1])
