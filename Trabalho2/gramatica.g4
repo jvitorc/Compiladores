@@ -94,7 +94,7 @@ e[inhr] returns [syn]: maisoumenos term e[Node($maisoumenos.value, $inhr, $term.
     | {$syn = $inhr}
     ;
 
-numexpression returns [$node]: term e[$term.node] {$node = $term.node} {insert_expression_table($e.syn)};
+numexpression returns [$node]: term e[$term.node] {$node = $$e.syn} {insert_expression_table($e.syn)};
 
 mdm returns [value]: MULTIPLICACAO {$value = $MULTIPLICACAO.text}
     | DIVISAO {$value = $DIVISAO.text}

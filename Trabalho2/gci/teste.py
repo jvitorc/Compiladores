@@ -7,6 +7,7 @@ from gramaticaParser import gramaticaParser
 from arvore import *
 from tabela import *
 
+
 def main(argv):
     input_stream = FileStream('in.txt', encoding='utf-8')
     lexer = gramaticaLexer(input_stream)
@@ -14,11 +15,8 @@ def main(argv):
     stream.getNumberOfOnChannelTokens()
     parser = gramaticaParser(stream)
     tree = parser.program()
-    print(Trees.toStringTree(tree, None, parser))
+    # print(Trees.toStringTree(tree, None, parser))
 
-    expression()
-    symbol()
-    breaks()
 
 def expression():
     print("\n\tExpressoes em pre-order:")
