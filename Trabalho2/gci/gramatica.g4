@@ -12,15 +12,15 @@ funclist[next] returns [code, begin]: {$begin = Label()} funcdef[$begin] funclis
 funcdef[next] returns[code]: DEF IDENT PARENTEA paramlist PARENTEF CHAVEA statelist[$next] CHAVEF {$code = LabelFunc($IDENT.text) + $statelist.code};
 
 a returns [value]: INT {$value = $INT.text} 
-    | FLOAT {$value = FLOAT.text}
-    | STRING {$value = STRING.text}
+    | FLOAT {$value = $FLOAT.text}
+    | STRING {$value = $STRING.text}
     ;
 
 paramlist: a IDENT VIRGULA paramlist 
         | a IDENT
         ;
 
-statement[next] returns [code]: vardecl PONTOEVIRGULA {$code = getNewLine()}
+statement[next] returns [code]: vardecl PONTOEVIRGULA {$code = $vardecl.code}
     | atribstat PONTOEVIRGULA {$code = $atribstat.code}
     | printstat PONTOEVIRGULA {$code = $printstat.code}
     | readstat PONTOEVIRGULA {$code = $readstat.code}
@@ -28,7 +28,7 @@ statement[next] returns [code]: vardecl PONTOEVIRGULA {$code = getNewLine()}
     | ifstat[$next] {$code = $ifstat.code} 
     | forstat[$next] {$code = $forstat.code} 
     | CHAVEA statelist[$next] CHAVEF {$code = $statelist.code} 
-    | BREAK PONTOEVIRGULA {$code = "break" + getNewLine()}
+    | BREAK PONTOEVIRGULA {$code = "goto " + $next + getNewLine()}
     | PONTOEVIRGULA {$code = getNewLine()}
     ;
 
@@ -36,7 +36,7 @@ b: COLCHA INT_CONSTANT COLCHF b
     |
     ;
 
-vardecl: a IDENT b;
+vardecl returns [code]: a IDENT b {$code = $a.value + " " + $IDENT.text + getNewLine()};
 
 c returns [code, result]: expression {$code = $expression.code} {$result = $expression.result} 
     | allocexpression {$code = $allocexpression.code} {$result = $allocexpression.result}
