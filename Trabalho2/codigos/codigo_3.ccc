@@ -1,0 +1,100 @@
+def funcaodotime10(int p1, int p2) {
+  int m5;
+  int i;
+  for(i = 0; i < 500000; i = i + 1) {
+    m5 = m5 + 3 * i;
+    m5 = m5/i;
+    if(i == 1) {
+      m5 = m5 - i;
+    }
+    if(i % 2 == 0) {
+      m5 = m5 - i;
+    }
+    if(i % 3 == 0) {
+      m5 = m5 - i;
+    }
+    break;
+  }
+
+  for(i = 0; i < 500000; i = i + 1) {
+    m5 = m5 + 3 * i;
+    m5 = m5/i;
+    if(i == 1) {
+      m5 = m5 - i;
+    }
+    if(i % 2 == 0) {
+      m5 = m5 - i;
+    }
+    if(i % 3 == 0) {
+      m5 = m5 - i;
+    }
+    break;
+  }
+
+  for(i = 0; i < 500000; i = i + 1) {
+    m5 = m5 + 3 * i;
+    m5 = m5/i;
+    if(i == 1) {
+      m5 = m5 + i;
+    }
+    if(i % 2 == 0) {
+      m5 = m5 - i;
+    }
+    if(i % 3 == 0) {
+      m5 = m5/i;
+    }
+    break;
+  }
+  print "Carregando!!!";
+  print "Ano 2020";
+  print "Ano novo";
+  print "Não Aguento mais";
+  for(i = 0; i < 100000; i = i + 1){
+    if(i % 2 == 0){
+      print "par";
+    } else {
+      print "impar";
+    }
+  }
+  for(i = 0; i < 100; i = i + 2){
+    if(i < 100) {
+      print "i menor que 100";
+    } else {
+      print "não é menor que 100";
+    }
+  }
+  return;
+}
+
+def funcaoAleatoria(int p1, int p2) {
+  int m2;
+  m2 = funcaodotime10(p1, p2);
+  print "Alvaro me da 10";
+  print "Veja Bem!";
+  for(i = 0; i < 500000; i = i + 1) {
+    int m2;
+    m2 = m2 + 3 * i;
+    m2 = m2/i;
+    if(i == 1) {
+      m2 = m2 - i;
+    }
+    if(i % 2 == 0) {
+      m2 = m2 - i;
+    }
+    if(i % 3 == 0) {
+      m2 = m2 - i;
+    }
+    break;
+  }
+
+   for(i = 0; i < 100; i = i + 2){
+    if(i < 100) {
+      print "i menor que 100";
+    } else {
+      print "não é menor que 100";
+    }
+  }
+  print "Feliz natal!!";
+  print "Isso aqui vale um 10";
+  return;
+}
