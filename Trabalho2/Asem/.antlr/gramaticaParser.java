@@ -1117,7 +1117,6 @@ public class gramaticaParser extends Parser {
 			return getRuleContext(NumexpressionContext.class,0);
 		}
 		public TerminalNode COLCHF() { return getToken(gramaticaParser.COLCHF, 0); }
-		public TerminalNode CHAVEF() { return getToken(gramaticaParser.CHAVEF, 0); }
 		public DContext d() {
 			return getRuleContext(DContext.class,0);
 		}
@@ -1133,8 +1132,8 @@ public class gramaticaParser extends Parser {
 		try {
 			setState(215);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case COLCHA:
+			switch ( getInterpreter().adaptivePredict(_input,10,_ctx) ) {
+			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(206);
@@ -1145,11 +1144,11 @@ public class gramaticaParser extends Parser {
 				match(COLCHF);
 				}
 				break;
-			case CHAVEF:
+			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(210);
-				match(CHAVEF);
+				match(COLCHA);
 				setState(211);
 				numexpression();
 				setState(212);
@@ -1158,8 +1157,6 @@ public class gramaticaParser extends Parser {
 				d();
 				}
 				break;
-			default:
-				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1985,10 +1982,10 @@ public class gramaticaParser extends Parser {
 		"\u00cb\u00cc\5$\23\2\u00cc\u00cf\3\2\2\2\u00cd\u00cf\5\f\7\2\u00ce\u00ca"+
 		"\3\2\2\2\u00ce\u00cd\3\2\2\2\u00cf%\3\2\2\2\u00d0\u00d1\7\f\2\2\u00d1"+
 		"\u00d2\5\62\32\2\u00d2\u00d3\7\r\2\2\u00d3\u00da\3\2\2\2\u00d4\u00d5\7"+
-		"\13\2\2\u00d5\u00d6\5\62\32\2\u00d6\u00d7\7\r\2\2\u00d7\u00d8\5&\24\2"+
-		"\u00d8\u00da\3\2\2\2\u00d9\u00d0\3\2\2\2\u00d9\u00d4\3\2\2\2\u00da\'\3"+
-		"\2\2\2\u00db\u00dc\7\26\2\2\u00dc\u00dd\5\b\5\2\u00dd\u00de\5&\24\2\u00de"+
-		")\3\2\2\2\u00df\u00e0\t\2\2\2\u00e0+\3\2\2\2\u00e1\u00e2\5\62\32\2\u00e2"+
+		"\f\2\2\u00d5\u00d6\5\62\32\2\u00d6\u00d7\7\r\2\2\u00d7\u00d8\5&\24\2\u00d8"+
+		"\u00da\3\2\2\2\u00d9\u00d0\3\2\2\2\u00d9\u00d4\3\2\2\2\u00da\'\3\2\2\2"+
+		"\u00db\u00dc\7\26\2\2\u00dc\u00dd\5\b\5\2\u00dd\u00de\5&\24\2\u00de)\3"+
+		"\2\2\2\u00df\u00e0\t\2\2\2\u00e0+\3\2\2\2\u00e1\u00e2\5\62\32\2\u00e2"+
 		"\u00e3\5*\26\2\u00e3\u00e4\5\62\32\2\u00e4\u00e7\3\2\2\2\u00e5\u00e7\5"+
 		"\62\32\2\u00e6\u00e1\3\2\2\2\u00e6\u00e5\3\2\2\2\u00e7-\3\2\2\2\u00e8"+
 		"\u00e9\7\37\2\2\u00e9\u00ed\b\30\1\2\u00ea\u00eb\7 \2\2\u00eb\u00ed\b"+

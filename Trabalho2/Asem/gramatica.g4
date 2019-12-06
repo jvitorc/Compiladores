@@ -71,7 +71,7 @@ statelist: statement statelist
     ;
 
 d: COLCHA numexpression COLCHF
-    | CHAVEF numexpression COLCHF d
+    | COLCHA numexpression COLCHF d
     ;
 
 allocexpression: NEW a d;

@@ -96,7 +96,7 @@ def serializedATN():
         buf.write("\u00cf\5\f\7\2\u00ce\u00ca\3\2\2\2\u00ce\u00cd\3\2\2\2")
         buf.write("\u00cf%\3\2\2\2\u00d0\u00d1\7\f\2\2\u00d1\u00d2\5\62\32")
         buf.write("\2\u00d2\u00d3\7\r\2\2\u00d3\u00da\3\2\2\2\u00d4\u00d5")
-        buf.write("\7\13\2\2\u00d5\u00d6\5\62\32\2\u00d6\u00d7\7\r\2\2\u00d7")
+        buf.write("\7\f\2\2\u00d5\u00d6\5\62\32\2\u00d6\u00d7\7\r\2\2\u00d7")
         buf.write("\u00d8\5&\24\2\u00d8\u00da\3\2\2\2\u00d9\u00d0\3\2\2\2")
         buf.write("\u00d9\u00d4\3\2\2\2\u00da\'\3\2\2\2\u00db\u00dc\7\26")
         buf.write("\2\2\u00dc\u00dd\5\b\5\2\u00dd\u00de\5&\24\2\u00de)\3")
@@ -1489,9 +1489,6 @@ class gramaticaParser ( Parser ):
         def COLCHF(self):
             return self.getToken(gramaticaParser.COLCHF, 0)
 
-        def CHAVEF(self):
-            return self.getToken(gramaticaParser.CHAVEF, 0)
-
         def d(self):
             return self.getTypedRuleContext(gramaticaParser.DContext,0)
 
@@ -1517,8 +1514,8 @@ class gramaticaParser ( Parser ):
         try:
             self.state = 215
             self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [gramaticaParser.COLCHA]:
+            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 206
                 self.match(gramaticaParser.COLCHA)
@@ -1527,10 +1524,11 @@ class gramaticaParser ( Parser ):
                 self.state = 208
                 self.match(gramaticaParser.COLCHF)
                 pass
-            elif token in [gramaticaParser.CHAVEF]:
+
+            elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 210
-                self.match(gramaticaParser.CHAVEF)
+                self.match(gramaticaParser.COLCHA)
                 self.state = 211
                 self.numexpression()
                 self.state = 212
@@ -1538,8 +1536,7 @@ class gramaticaParser ( Parser ):
                 self.state = 213
                 self.d()
                 pass
-            else:
-                raise NoViableAltException(self)
+
 
         except RecognitionException as re:
             localctx.exception = re
